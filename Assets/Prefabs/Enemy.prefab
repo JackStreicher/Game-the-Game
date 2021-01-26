@@ -65,7 +65,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   npcTag: 1
   npcName: Robber
-  hitpoints: 0
+  hitpoints: 100
   level: 10
   difficulty: 2
 --- !u!54 &-3939816805620942124

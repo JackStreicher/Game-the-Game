@@ -92,6 +92,7 @@
     <Compile Include="Assets\Scripts\Scriptable Objects\Quest.cs" />
     <Compile Include="Assets\Scripts\Scriptable Objects\Stats.cs" />
     <Compile Include="Assets\Scripts\SetTextField.cs" />
+    <Compile Include="Assets\Scripts\Shoot.cs" />
     <Compile Include="Assets\Scripts\SimpleInventoryList.cs" />
     <Compile Include="Assets\Scripts\Statics\Remover.cs" />
     <Compile Include="Assets\Scripts\UIControler.cs" />

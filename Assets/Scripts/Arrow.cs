@@ -9,6 +9,7 @@ public class Arrow : MonoBehaviour
     Rigidbody rb;
 
     //Longow Power: 400-480 Newton
+    public float basePower { get; private set; } = 55;
     private float power = 55;
 
     public float damage;
@@ -145,15 +146,21 @@ public class Arrow : MonoBehaviour
     
 
   
-    public void setProjectilePower(float newPower)
+    public void SetProjectilePower(float newPower)
     {
 
         power = newPower;
+        damage = power;
+
+    }
+    public float GetProjectilePower()
+    {
+
+        return power;
 
     }
 
 
-  
 }
 
 

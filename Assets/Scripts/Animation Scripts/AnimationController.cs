@@ -8,16 +8,16 @@ public class AnimationController : MonoBehaviour
 
     Animator anim;
     Rigidbody playerRB;
-
-    public GameObject projectile;
-    public Transform projectileSpawnPos;
-    private Vector3 targetPos;
     
 
     int jumpHash = Animator.StringToHash("Jump");
     int xHash = Animator.StringToHash("X");
     int yHash = Animator.StringToHash("Y");
     int randomHash = Animator.StringToHash("Random");
+    int combatStateHash = Animator.StringToHash("isCombat");
+  
+
+
 
     int takeAim = Animator.StringToHash("TakeAim");
     int hold = Animator.StringToHash("Hold");
@@ -38,16 +38,17 @@ public class AnimationController : MonoBehaviour
 
     GameObject projectileRef;
 
+    public bool isCombat { get; set; } = false;
+
     //int runHash = Animator.StringToHash("Jump");
 
     public void Start()
     {
         anim = transform.GetComponent<Animator>();
         playerRB = GameObject.Find("Player").GetComponent<Rigidbody>();
-        //anim.SetLayerWeight(1, 0);
-        anim.SetFloat(randomHash, 1);
+        anim.SetLayerWeight(1, 0);
+        //anim.SetFloat(randomHash, 1);
 
-        targetPos = GameObject.Find("CrossHair").GetComponent<RangedHitPoint>().missleTarget;
     }
 
 
@@ -57,81 +58,6 @@ public class AnimationController : MonoBehaviour
     {
         
 
-        //if (timeElapsed < lerpDuration)
-        //{
-        //    prevNr = lerping;
-        //    lerping = Mathf.Lerp(prevNr, currentNr, timeElapsed / lerpDuration);
-        //    Debug.Log(lerping);
-        //
-        //    anim.SetFloat(randomHash, lerping);
-        //    timeElapsed += Time.deltaTime;
-        //}
-        //else
-        //{
-        //    timeElapsed = 0;
-        //}
-
-        if (Input.GetMouseButtonDown(0))
-        {
-            anim.SetLayerWeight(1, 1);
-            isAttackStarted = true;
-            anim.SetTrigger(takeAim);
-            //anim.SetTrigger(hold);
-
-            projectileRef = Instantiate(projectile, projectileSpawnPos);
-            projectileRef.GetComponent<Arrow>().parentTrans = projectileSpawnPos;
-        }
-        //else
-        //{
-        //    anim.SetTrigger(cancelAttack);
-        //}
-        if (isAttackStarted)
-        {
-            anim.SetLayerWeight(1, 1);
-            if (Input.GetMouseButton(0))
-            {
-                //anim.ResetTrigger(takeAim);
-                anim.SetTrigger(hold);
-                isHolding = true;
-                
-            }
-            if (Input.GetMouseButton(3))
-            {
-                anim.SetTrigger(cancelAttack);
-                isHolding = false;
-                isAttackStarted = false;
-                Destroy(projectileRef);
-                //anim.SetLayerWeight(1, 0);
-            }
-        }
-        
-            if (Input.GetMouseButtonUp(0) && (isAttackStarted || isHolding))
-            {
-                anim.SetTrigger(fire);                
-                anim.SetTrigger(cancelAttack);
-                isHolding = false;
-                isAttackStarted = false;
-
-            //Setting the target of the Arrow
-            targetPos = GameObject.Find("CrossHair").GetComponent<RangedHitPoint>().missleTarget;
-            
-            //Refactor this into a seperate script
-            projectileRef.transform.SetParent(null);
-            projectileRef.GetComponent<Arrow>().parentTrans = null;
-            projectileRef.GetComponent<Arrow>().Fire(targetPos);
-                
-        }
-            if (Input.GetMouseButton(3))
-            {
-                anim.SetTrigger(cancelAttack);
-                isHolding = false;
-                isAttackStarted = false;
-                Destroy(projectileRef);
-            //anim.SetLayerWeight(1, 0);
-        }
-
-        
-        
 
 
         if (anim != null)
@@ -152,7 +78,7 @@ public class AnimationController : MonoBehaviour
                 y = Mathf.Clamp(y, -0.5f, 0.5f);
             }
 
-            //Debug.Log("X " + x + "|| Y " + y);
+         
 
             anim.SetFloat(xHash, x);
             anim.SetFloat(yHash, y);
@@ -161,7 +87,6 @@ public class AnimationController : MonoBehaviour
 
             anim.SetFloat("Speed", move);
 
-            //Debug.Log(move);
 
             if (Input.GetKeyDown(KeyCode.Space))
             {
@@ -175,33 +100,26 @@ public class AnimationController : MonoBehaviour
                 anim.SetBool("StrafeRight", true);
 
             }
-          
 
 
+            if (Input.GetKeyDown(KeyCode.LeftAlt))
+            {
+                if (isCombat)
+                {
+                    isCombat = false;
+                    anim.SetBool(combatStateHash, isCombat);
+                }
+                else
+                {
+                    isCombat = true;
+                    anim.SetBool(combatStateHash, isCombat);
+                }
+            }
         }
 
 
 
     }
 
-    public void FixedUpdate()
-    {
-
-        //anim.SetFloat(randomHash, 1);
-
-
-        //3 seconds
-        //if (counter < 450)
-        //{
-        //    counter++;
-        //}
-        //else
-        //{
-        //    //prevNr = lerping;
-        //    Random.InitState(System.DateTime.Now.Millisecond);
-        //    var rand = Random.Range(0, amountOfIdleAnimationss);
-        //    currentNr = rand;            
-        //    counter = 0;
-        //}
-    }
+    
 }
