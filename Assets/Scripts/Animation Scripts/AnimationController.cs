@@ -46,7 +46,7 @@ public class AnimationController : MonoBehaviour
     {
         anim = transform.GetComponent<Animator>();
         playerRB = GameObject.Find("Player").GetComponent<Rigidbody>();
-        anim.SetLayerWeight(1, 0);
+        //anim.SetLayerWeight(1, 0);
         //anim.SetFloat(randomHash, 1);
 
     }

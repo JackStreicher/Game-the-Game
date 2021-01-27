@@ -44,7 +44,7 @@ public class Shoot : MonoBehaviour
         //Cooldown after firing an arrow
         if (!canFire)
         {
-            if (cooldownCounter < 20)
+            if (cooldownCounter < 30)
             {
                 cooldownCounter++;
                 
@@ -70,7 +70,15 @@ public class Shoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //if (anim.GetCurrentAnimatorClipInfo(1).Length > 0)
+        //{
+        //    Debug.Log(anim.GetCurrentAnimatorClipInfo(1)[0].clip.name);
+        //}
+        
         if (canFire && animContrl.isCombat) {
+
+
+
             if (Input.GetMouseButtonDown(0))
             {
                 anim.SetLayerWeight(1, 1);
@@ -84,7 +92,7 @@ public class Shoot : MonoBehaviour
 
             if (isAttackStarted)
             {
-                anim.SetLayerWeight(1, 1);
+                //anim.SetLayerWeight(1, 1);
                 if (Input.GetMouseButton(0))
                 {
                     //anim.ResetTrigger(takeAim);
@@ -100,13 +108,14 @@ public class Shoot : MonoBehaviour
 
             if (Input.GetMouseButtonUp(0) && (isAttackStarted || isHolding))
             {
+
                 anim.SetTrigger(fire);
-                anim.SetTrigger(cancelAttack);
                 isHolding = false;
+                
                 isAttackStarted = false;
 
                 canFire = false;
-
+               
                 projectileRef.GetComponent<Arrow>().SetProjectilePower(drawPower);
 
                 isDrawing = false;
@@ -117,7 +126,9 @@ public class Shoot : MonoBehaviour
                 projectileRef.transform.SetParent(null);
                 projectileRef.GetComponent<Arrow>().parentTrans = null;
                 projectileRef.GetComponent<Arrow>().Fire(targetPos);
+                anim.SetTrigger(cancelAttack);
 
+                anim.SetLayerWeight(1, 1);
             }
             if (Input.GetMouseButton(3))
             {
@@ -133,5 +144,6 @@ public class Shoot : MonoBehaviour
         isAttackStarted = false;
         Destroy(projectileRef);
         isDrawing = false;
+        
     }
 }

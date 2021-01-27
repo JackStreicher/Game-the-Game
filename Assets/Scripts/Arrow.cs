@@ -48,7 +48,7 @@ public class Arrow : MonoBehaviour
         transform.LookAt(tar);
         //Debug.Log(tar);
         rb.AddForce(transform.forward * power, ForceMode.VelocityChange);
-        //rb.AddTorque(transform.forward * 40, ForceMode.Acceleration);
+        rb.AddTorque(transform.forward * 80, ForceMode.Impulse);
         //transform.Rotate(-15, 0, 0);
         rb.useGravity = true;
         
