@@ -1,2 +1,5 @@
 Library/*
-
+Packages/*
+Temp/*
+Assembly-CSharp*
+.vscode/*
