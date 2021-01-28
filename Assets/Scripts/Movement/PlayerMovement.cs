@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
 
 
         //Load these via PlayerConfig Scriptable Object
-        speed = 7.5f;
+        speed = 6f;
         speedModifier = 1.5f;
         
         //jumpPower = 2f;
@@ -77,8 +77,11 @@ public class PlayerMovement : MonoBehaviour
         //Movement Left-Right Forwards-Backwards
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            move = transform.right * x * (speed * speedModifier - slow) //Left - right
-                    + transform.forward * z * (speed * speedModifier - slow) // forward, backwards
+            //maximum range for walking
+            
+
+            move = transform.right * x * ((speed - slow) * speedModifier ) //Left - right
+                    + transform.forward * z * ((speed - slow) * speedModifier - slow) // forward, backwards
                     + transform.up * playerRB.velocity.y; // gravity
 
             //set the Speed of the RigidBody
@@ -93,6 +96,12 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
+           
+            //checking for diagonal movement
+            if (x > 0 && z <  0 || x < 0 && z > 0 || x < 0 && z < 0 ||x > 0 && z > 0)
+            {
+                slow = speed * 0.333f;
+            }
             move = transform.right * x * (speed - slow) //Left - right
                     + transform.forward * z * (speed - slow) // forward, backwards
                     + transform.up * playerRB.velocity.y; // gravity

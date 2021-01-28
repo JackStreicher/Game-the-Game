@@ -7,6 +7,7 @@ public class PlayerInteraction : MonoBehaviour
 {
     public GameObject crossHair;
     public GameObject target;
+    
 
     private Text targetName;
 
@@ -41,7 +42,7 @@ public class PlayerInteraction : MonoBehaviour
         if (Physics.Raycast(worldPosCrosshair, out hit, 20f) && hit.transform.tag != "Terrain")
         {
             targetName.text = hit.transform.name;
-
+            target = hit.transform.gameObject;
             //Add Item Logic
             if (hit.transform.tag == "Interactable" && Input.GetKey(KeyCode.F))
             {
