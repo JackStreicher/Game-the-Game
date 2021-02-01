@@ -15,6 +15,7 @@ public class NPCStats : MonoBehaviour
     public Animator anim;
     public NPCTag npcTag;
     public string npcName;
+    public float baseHitpoints;
     public float hitpoints;
     public int level;
     //Ordinary enemies: 1, elites: 2, unquies: 3, boss: 4, god: 6;
@@ -89,6 +90,12 @@ public class NPCStats : MonoBehaviour
         Remover.CheckAndRemove(this.transform.gameObject);
     }
 
+
+    public void Heal(float amount)
+    {
+        hitpoints += amount;
+        hitpoints = Mathf.Clamp(hitpoints, 0, baseHitpoints);
+    }
 
 
 }

@@ -66,8 +66,11 @@
     <Compile Include="Assets\Scripts\Animation Scripts\AnimationController.cs" />
     <Compile Include="Assets\Scripts\Arrow.cs" />
     <Compile Include="Assets\Scripts\DialogManager.cs" />
-    <Compile Include="Assets\Scripts\Equipment.cs" />
+    <Compile Include="Assets\Scripts\EquipmentManager.cs" />
+    <Compile Include="Assets\Scripts\EquipmentSlot.cs" />
+    <Compile Include="Assets\Scripts\EquipmentUISlot.cs" />
     <Compile Include="Assets\Scripts\From External Sources\Terrain2OBJ.cs" />
+    <Compile Include="Assets\Scripts\InventorySlot.cs" />
     <Compile Include="Assets\Scripts\InventoryState.cs" />
     <Compile Include="Assets\Scripts\InventoryUIConnection.cs" />
     <Compile Include="Assets\Scripts\ItemDrop.cs" />
@@ -89,8 +92,10 @@
     <Compile Include="Assets\Scripts\Scriptable Objects\Goal.cs" />
     <Compile Include="Assets\Scripts\Scriptable Objects\InventoryManager.cs" />
     <Compile Include="Assets\Scripts\Scriptable Objects\Item.cs" />
+    <Compile Include="Assets\Scripts\Scriptable Objects\PlayerReference.cs" />
     <Compile Include="Assets\Scripts\Scriptable Objects\Quest.cs" />
     <Compile Include="Assets\Scripts\Scriptable Objects\Stats.cs" />
+    <Compile Include="Assets\Scripts\Scriptable Objects\Weapon.cs" />
     <Compile Include="Assets\Scripts\SetTextField.cs" />
     <Compile Include="Assets\Scripts\Shoot.cs" />
     <Compile Include="Assets\Scripts\SimpleInventoryList.cs" />
