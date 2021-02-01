@@ -9,9 +9,7 @@ public class Consumable : Item
     [SerializeField]
     private string benefit;
     [SerializeField]
-    private bool canHeal;
-    [SerializeField]   
-    private bool isUsedUp;
+    private bool canHeal;   
     [SerializeField] 
     private float healingAmount;
     
@@ -23,24 +21,17 @@ public class Consumable : Item
         //Heal Player Health
     }
 
-    public void UseUp(bool isDepleted)
-    {
-        isUsedUp = isDepleted;
-    }
 
-    public void CanHeal(bool canHeal)
+    public bool CanHeal()
     {
-        isUsedUp = canHeal;
+        return canHeal;
     }
 
     public bool GetCanHeal()
     {
         return canHeal;
     }
-    public bool IsUsedUp()
-    {
-        return isUsedUp;
-    }
+   
 
     public string GetBeneftig()
     {
@@ -50,6 +41,26 @@ public class Consumable : Item
     {
         return healingAmount;
     }
-  
+
+    public virtual void Consume(Object stats)
+    {
+        if (canHeal && (stats is Stats && canHeal || stats == null))
+        {
+            Stats playerStats = GameObject.Find("Player").GetComponent<Stats>();
+            playerStats.Heal(healingAmount);
+            
+            
+           
+        }
+        if (canHeal && stats is NPCStats && canHeal)
+        {
+            NPCStats npcStats = (NPCStats)stats;
+            npcStats.Heal(healingAmount);
+           
+
+           
+        }
+
+    }
 
 }
