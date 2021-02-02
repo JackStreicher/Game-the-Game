@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7945072947295216752}
   - component: {fileID: 6479917169736412117}
   - component: {fileID: 9081998054177316639}
+  - component: {fileID: 4126491340395832300}
   m_Layer: 0
   m_Name: GroundSmallStones
   m_TagString: Untagged
@@ -80,3 +81,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &4126491340395832300
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7280422207563022026}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.049999997, y: 0.04999999, z: 0.0021010838}
+  m_Center: {x: 0, y: -3.8162226e-19, z: -0.00094946177}
