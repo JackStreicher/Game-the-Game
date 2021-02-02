@@ -1,8 +1,14 @@
 fileFormatVersion: 2
-guid: 0379bd8b9ee15ba40a490b5d7aa920c6
+guid: 509f75e144ba3d75aa2e12303593afca
 ModelImporter:
   serializedVersion: 19301
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: -1950444056520951649
+    second: ChestLid|Closing Chest
+  - first:
+      74: 6282205571986944549
+    second: ChestLid|Opening Chest
   externalObjects: {}
   materials:
     materialImportMode: 1
