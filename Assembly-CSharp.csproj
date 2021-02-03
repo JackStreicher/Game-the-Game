@@ -82,7 +82,6 @@
     <Compile Include="Assets\Scripts\NPCConversation.cs" />
     <Compile Include="Assets\Scripts\NPCStats.cs" />
     <Compile Include="Assets\Scripts\PlayerInteraction.cs" />
-    <Compile Include="Assets\Scripts\Puzzle\MoveBlock.cs" />
     <Compile Include="Assets\Scripts\QuestLogUIText.cs" />
     <Compile Include="Assets\Scripts\QuestOnButton.cs" />
     <Compile Include="Assets\Scripts\Questlog.cs" />
@@ -104,6 +103,8 @@
     <Compile Include="Assets\Scripts\Statics\Remover.cs" />
     <Compile Include="Assets\Scripts\UIControler.cs" />
     <Compile Include="Assets\Scripts\UpdateUIQuestList.cs" />
+    <Compile Include="Assets\Scripts\puzzle block\MoveBlock.cs" />
+    <Compile Include="Assets\Scripts\puzzle block\StopBlock.cs" />
     <None Include="Assets\Materials\Terrain\TerrainSurfaceShader.shader" />
     <None Include="Assets\Sky\Fantasy Skybox FREE\Readme.txt" />
     <None Include="Assets\Materials\Terrain\Terrain World Space Shader.shader" />
