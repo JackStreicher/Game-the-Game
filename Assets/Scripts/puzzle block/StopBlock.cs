@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class StopBlock : MonoBehaviour
 {
+    public string BadOBJTag;
+    public GameObject shutDown;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +17,19 @@ public class StopBlock : MonoBehaviour
     void Update()
     {
         
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == BadOBJTag)
+        {
+            shutDown.SetActive(false);
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.tag == BadOBJTag)
+        {
+            shutDown.SetActive(true);
+        }
     }
 }

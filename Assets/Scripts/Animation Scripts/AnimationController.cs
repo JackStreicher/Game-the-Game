@@ -7,7 +7,8 @@ public class AnimationController : MonoBehaviour
 {
 
     Animator anim;
-    Rigidbody playerRB;
+    public PlayerMovement playerMovement;
+    Vector3 playerspeed;
     
 
     int jumpHash = Animator.StringToHash("Jump");
@@ -24,7 +25,7 @@ public class AnimationController : MonoBehaviour
     int fire = Animator.StringToHash("Fire");
     int cancelAttack = Animator.StringToHash("CancelAttack");
 
-    public int amountOfIdleAnimationss = 3;
+    //public int amountOfIdleAnimationss = 3;
 
     int counter = 0;
     float prevNr = 0;
@@ -36,27 +37,57 @@ public class AnimationController : MonoBehaviour
     bool isAttackStarted = false;
     bool isHolding = false;
 
+
     GameObject projectileRef;
 
     public bool isCombat { get; set; } = false;
+
+
+    int fallCounter = 0;
 
     //int runHash = Animator.StringToHash("Jump");
 
     public void Start()
     {
         anim = transform.GetComponent<Animator>();
-        playerRB = GameObject.Find("Player").GetComponent<Rigidbody>();
+       
         //anim.SetLayerWeight(1, 0);
         //anim.SetFloat(randomHash, 1);
 
     }
 
 
+    public void FixedUpdate()
+    {
+        if (!playerMovement.isGroundedPlayer)
+        {
+            fallCounter++;
+            if (fallCounter >= 80)
+            {
+                anim.SetBool("isFalling", true);
+                fallCounter = 0;
+            }
+        }
+        else
+        {
+            anim.SetBool("isFalling", false);
+            fallCounter = 0;
+        }
+    }
+
 
     // Update is called once per frame
     void Update()
     {
-        
+
+        float playerVelocity = playerMovement.move.magnitude;
+
+
+
+
+
+
+
 
 
 
@@ -78,28 +109,34 @@ public class AnimationController : MonoBehaviour
                 y = Mathf.Clamp(y, -0.5f, 0.5f);
             }
 
-         
+
+
+
+
+
 
             anim.SetFloat(xHash, x);
             anim.SetFloat(yHash, y);
 
-            float move = playerRB.velocity.magnitude;
+           
 
-            anim.SetFloat("Speed", move);
+            anim.SetFloat("Speed", playerVelocity);
 
 
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space) && playerMovement.isGroundedPlayer)
             {
                 anim.SetTrigger(jumpHash);
+
+                
             }
 
           
 
-            if (Input.GetKey(KeyCode.A))
-            {
-                anim.SetBool("StrafeRight", true);
-
-            }
+           // if (Input.GetKey(KeyCode.A))
+           // {
+           //     anim.SetBool("StrafeRight", true);
+           //
+           // }
 
 
             if (Input.GetKeyDown(KeyCode.LeftAlt))
