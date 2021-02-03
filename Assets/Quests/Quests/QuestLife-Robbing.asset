@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 25ab28c0c15cd414f9fd39ae10fd1f07, type: 3}
-  m_Name: QuestMoreIron
+  m_Name: QuestLife-Robbing
   m_EditorClassIdentifier: 
-  title: Quest More Iron
-  description: Get me some Iron Balls
+  title: Life-Robbing
+  description: Defeat the Robbers
   goals:
-  - {fileID: 11400000, guid: b423e3adb62647d44aafd2519c0aa1cc, type: 2}
+  - {fileID: 11400000, guid: 300dc261bf404fb49a44a1eb25b6b1f3, type: 2}
   finished: 0
   completed: 0
   itemReward:
   - {fileID: 11400000, guid: a3f42236144168448bb6e550bf36a6f2, type: 2}
-  goldReward: 300
+  goldReward: 500
   childQuests: []
-  experienceReward: 300
+  experienceReward: 350
   isQuestAccepted: 1
