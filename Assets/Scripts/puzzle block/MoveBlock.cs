@@ -13,17 +13,14 @@ public class MoveBlock : MonoBehaviour
     [Header("Push")]
     public float push_LR;
     public float push_FB;
-    public float psuhTime;
+    public float psuhES;
     public string pushOBJTag;
     private bool isPushed;
 
 
 
     // Start is called before the first frame update
-    void Start()
-    {
-       
-    }
+
 
     // Update is called once per frame
     void Update()
@@ -55,9 +52,12 @@ public class MoveBlock : MonoBehaviour
         
         yield return new WaitForSeconds(waitForMove);
 
-        for(float i = 0; i <= psuhTime;)
+
+ 
+
+        for(float i = 0; i <= psuhES;)
         {
-            pushOBJ.transform.Translate(new Vector3(push_LR, 0, push_FB) * Time.deltaTime) ;
+            pushOBJ.transform.Translate(new Vector3(push_LR, 0, push_FB) * Time.deltaTime);
             i++;
         }
     }
