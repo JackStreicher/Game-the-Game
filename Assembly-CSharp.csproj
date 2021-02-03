@@ -47,7 +47,6 @@
   <PropertyGroup>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UnityProjectGenerator>Unity/VSTU</UnityProjectGenerator>
-    <UnityProjectGeneratorVersion>4.8.2.0</UnityProjectGeneratorVersion>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2019.4.18f1</UnityVersion>
@@ -67,13 +66,15 @@
     <Compile Include="Assets\Materials\Terrain\MeshGradient.cs" />
     <Compile Include="Assets\Scripts\Animation Scripts\AnimationController.cs" />
     <Compile Include="Assets\Scripts\Arrow.cs" />
-    <Compile Include="Assets\Scripts\DayAndNight\LightingManager.cs" />
-    <Compile Include="Assets\Scripts\DayAndNight\LightingPreset.cs" />
     <Compile Include="Assets\Scripts\DialogManager.cs" />
     <Compile Include="Assets\Scripts\EquipmentManager.cs" />
     <Compile Include="Assets\Scripts\EquipmentSlot.cs" />
     <Compile Include="Assets\Scripts\EquipmentUISlot.cs" />
     <Compile Include="Assets\Scripts\From External Sources\Terrain2OBJ.cs" />
+    <Compile Include="Assets\Scripts\Gruppe5-Stähle\DayAndNight\LightingManager.cs" />
+    <Compile Include="Assets\Scripts\Gruppe5-Stähle\DayAndNight\LightingPreset.cs" />
+    <Compile Include="Assets\Scripts\Gruppe5-Stähle\WaterMove.cs" />
+    <Compile Include="Assets\Scripts\Gruppe5-Stähle\WaterPlane.cs" />
     <Compile Include="Assets\Scripts\InventorySlot.cs" />
     <Compile Include="Assets\Scripts\InventoryState.cs" />
     <Compile Include="Assets\Scripts\InventoryUIConnection.cs" />
@@ -106,8 +107,6 @@
     <Compile Include="Assets\Scripts\Statics\Remover.cs" />
     <Compile Include="Assets\Scripts\UIControler.cs" />
     <Compile Include="Assets\Scripts\UpdateUIQuestList.cs" />
-    <Compile Include="Assets\Scripts\WaterMove.cs" />
-    <Compile Include="Assets\Scripts\WaterPlane.cs" />
     <None Include="Assets\Materials\Terrain\TerrainSurfaceShader.shader" />
     <None Include="Assets\Sky\Fantasy Skybox FREE\Readme.txt" />
     <None Include="Assets\Materials\Terrain\Terrain World Space Shader.shader" />
@@ -640,46 +639,46 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.18f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>D:/UnityTeamProjekt/Github/Game-the-Game/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/cubex/OneDrive/Dokumente/GitHub/Game-the-Game/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>D:/UnityTeamProjekt/Github/Game-the-Game/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>C:/Users/cubex/OneDrive/Dokumente/GitHub/Game-the-Game/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Editor">
-      <HintPath>D:/UnityTeamProjekt/Github/Game-the-Game/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
+      <HintPath>C:/Users/cubex/OneDrive/Dokumente/GitHub/Game-the-Game/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Runtime">
-      <HintPath>D:/UnityTeamProjekt/Github/Game-the-Game/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+      <HintPath>C:/Users/cubex/OneDrive/Dokumente/GitHub/Game-the-Game/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/UnityTeamProjekt/Github/Game-the-Game/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/cubex/OneDrive/Dokumente/GitHub/Game-the-Game/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>D:/UnityTeamProjekt/Github/Game-the-Game/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/cubex/OneDrive/Dokumente/GitHub/Game-the-Game/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>D:/UnityTeamProjekt/Github/Game-the-Game/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/cubex/OneDrive/Dokumente/GitHub/Game-the-Game/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>D:/UnityTeamProjekt/Github/Game-the-Game/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/cubex/OneDrive/Dokumente/GitHub/Game-the-Game/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>D:/UnityTeamProjekt/Github/Game-the-Game/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>C:/Users/cubex/OneDrive/Dokumente/GitHub/Game-the-Game/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
-      <HintPath>D:/UnityTeamProjekt/Github/Game-the-Game/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+      <HintPath>C:/Users/cubex/OneDrive/Dokumente/GitHub/Game-the-Game/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ShaderGraph.Editor">
-      <HintPath>D:/UnityTeamProjekt/Github/Game-the-Game/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
+      <HintPath>C:/Users/cubex/OneDrive/Dokumente/GitHub/Game-the-Game/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
-      <HintPath>D:/UnityTeamProjekt/Github/Game-the-Game/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+      <HintPath>C:/Users/cubex/OneDrive/Dokumente/GitHub/Game-the-Game/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/UnityTeamProjekt/Github/Game-the-Game/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/cubex/OneDrive/Dokumente/GitHub/Game-the-Game/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>D:/UnityTeamProjekt/Github/Game-the-Game/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/cubex/OneDrive/Dokumente/GitHub/Game-the-Game/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>
