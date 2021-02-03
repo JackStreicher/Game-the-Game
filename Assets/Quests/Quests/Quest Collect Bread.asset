@@ -25,4 +25,4 @@ MonoBehaviour:
   childQuests:
   - {fileID: 11400000, guid: 92734289f99e8fd4cabdb0610cfda5fd, type: 2}
   experienceReward: 450
-  isQuestAccepted: 0
+  isQuestAccepted: 1

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: 210c9af0719a8154691b0ed66d080fa9
+<<<<<<< HEAD:Assets/_Scripts/camSwitchScript.cs.meta
+guid: 8a1f971fb53f0014f897c6cf801d2fbf
+=======
+guid: 52ea53a304e64f142b9be9b99fe18887
+>>>>>>> master:Assets/Scripts/Scriptable Objects/Weapon.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
