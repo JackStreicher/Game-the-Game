@@ -2001,7 +2001,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &270126654 stripped
 Transform:
@@ -3363,7 +3363,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &484071802
 PrefabInstance:
@@ -5958,7 +5958,7 @@ PrefabInstance:
     - target: {fileID: 4004565322900366687, guid: 89e234ffa7f8dbe469557c89ef9ed05a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 4004565322900366687, guid: 89e234ffa7f8dbe469557c89ef9ed05a,
         type: 3}
@@ -8515,7 +8515,7 @@ PrefabInstance:
     - target: {fileID: 4004565322900366687, guid: 89e234ffa7f8dbe469557c89ef9ed05a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 4004565322900366687, guid: 89e234ffa7f8dbe469557c89ef9ed05a,
         type: 3}
@@ -10274,6 +10274,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1709538646 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1865794549, guid: 2e28d664ea6d8204ca7fa46af2727cfe,
+    type: 3}
+  m_PrefabInstance: {fileID: 1100838044506693575}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 814055bbe57b5c444b4cd15e121f8cc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1711716784 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 155075078908560349, guid: 03129de0bceaad4418f7f0375b4b3c38,
@@ -10878,26 +10890,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64ca9e302d16490429d2a0f349d72095, type: 3}
---- !u!1 &1815217634 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 430654511, guid: 2e28d664ea6d8204ca7fa46af2727cfe,
-    type: 3}
-  m_PrefabInstance: {fileID: 1100838044506693575}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1815217636
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1815217634}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b09c4d9e77242a4408687bc48db7dee6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slot: 11
-  hasMirror: 0
 --- !u!1001 &1825355599
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12588,38 +12580,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 487275859, guid: 2e28d664ea6d8204ca7fa46af2727cfe, type: 3}
-      propertyPath: crossHair
-      value: 
-      objectReference: {fileID: 781154126}
+    - target: {fileID: 252019534, guid: 2e28d664ea6d8204ca7fa46af2727cfe, type: 3}
+      propertyPath: m_SkinWidth
+      value: 0.06
+      objectReference: {fileID: 0}
     - target: {fileID: 871046001, guid: 2e28d664ea6d8204ca7fa46af2727cfe, type: 3}
       propertyPath: uiQuestList
       value: 
       objectReference: {fileID: 1942165654}
-    - target: {fileID: 871046001, guid: 2e28d664ea6d8204ca7fa46af2727cfe, type: 3}
-      propertyPath: questList.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 871046001, guid: 2e28d664ea6d8204ca7fa46af2727cfe, type: 3}
-      propertyPath: questList.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: f6a4ef3774582c141b4acd105d49b823,
-        type: 2}
-    - target: {fileID: 871046001, guid: 2e28d664ea6d8204ca7fa46af2727cfe, type: 3}
-      propertyPath: questList.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: ae16b28a8e9abf14c9a75d057bfa668c,
-        type: 2}
-    - target: {fileID: 871046001, guid: 2e28d664ea6d8204ca7fa46af2727cfe, type: 3}
-      propertyPath: questList.Array.data[2]
-      value: 
-      objectReference: {fileID: 11400000, guid: 92734289f99e8fd4cabdb0610cfda5fd,
-        type: 2}
-    - target: {fileID: 894384515, guid: 2e28d664ea6d8204ca7fa46af2727cfe, type: 3}
-      propertyPath: defaultImage
-      value: 
-      objectReference: {fileID: 21300000, guid: 6dfc66edb2d6f78449848c63567c478f,
-        type: 3}
     - target: {fileID: 894384515, guid: 2e28d664ea6d8204ca7fa46af2727cfe, type: 3}
       propertyPath: itemSlots.Array.data[0]
       value: 
@@ -12660,32 +12628,19 @@ PrefabInstance:
       propertyPath: crossHair
       value: 
       objectReference: {fileID: 781154126}
-    - target: {fileID: 1979012648, guid: 2e28d664ea6d8204ca7fa46af2727cfe, type: 3}
-      propertyPath: playerRef
+    - target: {fileID: 1865794549, guid: 2e28d664ea6d8204ca7fa46af2727cfe, type: 3}
+      propertyPath: jumpPower
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925960769, guid: 2e28d664ea6d8204ca7fa46af2727cfe, type: 3}
+      propertyPath: playerMovement
       value: 
-      objectReference: {fileID: 11400000, guid: 62ce7681913e9d647bf1c0b0c3c1617f,
-        type: 2}
-    - target: {fileID: 22004806348519155, guid: 2e28d664ea6d8204ca7fa46af2727cfe,
-        type: 3}
-      propertyPath: defaultSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 6dfc66edb2d6f78449848c63567c478f,
-        type: 3}
+      objectReference: {fileID: 1709538646}
     - target: {fileID: 22004806348519155, guid: 2e28d664ea6d8204ca7fa46af2727cfe,
         type: 3}
       propertyPath: equipmentPanel
       value: 
       objectReference: {fileID: 1602247830}
-    - target: {fileID: 1100838042702160957, guid: 2e28d664ea6d8204ca7fa46af2727cfe,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.17
-      objectReference: {fileID: 0}
-    - target: {fileID: 1100838042702160957, guid: 2e28d664ea6d8204ca7fa46af2727cfe,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -3.82
-      objectReference: {fileID: 0}
     - target: {fileID: 1100838043424612864, guid: 2e28d664ea6d8204ca7fa46af2727cfe,
         type: 3}
       propertyPath: m_RootOrder
@@ -12694,17 +12649,17 @@ PrefabInstance:
     - target: {fileID: 1100838043424612864, guid: 2e28d664ea6d8204ca7fa46af2727cfe,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 89.3
+      value: 88.42
       objectReference: {fileID: 0}
     - target: {fileID: 1100838043424612864, guid: 2e28d664ea6d8204ca7fa46af2727cfe,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.6
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1100838043424612864, guid: 2e28d664ea6d8204ca7fa46af2727cfe,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 166.6
+      value: 137.69
       objectReference: {fileID: 0}
     - target: {fileID: 1100838043424612864, guid: 2e28d664ea6d8204ca7fa46af2727cfe,
         type: 3}
@@ -12771,16 +12726,6 @@ PrefabInstance:
       propertyPath: completeQuestBtn
       value: 
       objectReference: {fileID: 474564298}
-    - target: {fileID: 1610198999492197665, guid: 2e28d664ea6d8204ca7fa46af2727cfe,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5345620780856208598, guid: 2e28d664ea6d8204ca7fa46af2727cfe,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e28d664ea6d8204ca7fa46af2727cfe, type: 3}
 --- !u!114 &1100838044506693577 stripped
@@ -12906,7 +12851,7 @@ PrefabInstance:
     - target: {fileID: 2509200592773415437, guid: 6ed1e08f891d8064aa12133acd333565,
         type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 2509200592773415437, guid: 6ed1e08f891d8064aa12133acd333565,
         type: 3}
