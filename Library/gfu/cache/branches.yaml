@@ -13,13 +13,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 2
-  lastUpdatedAtString: 2021-01-26T14:57:22.831+01:00
-  initializedAtString: 2021-01-26T14:03:05.162+01:00
+  lastUpdatedAtString: 2021-02-02T11:09:36.042+01:00
+  initializedAtString: 2021-02-02T11:09:35.963+01:00
   localBranches:
-  - name: Dozent
-    tracking: origin/Dozent
+  - name: Gebhardt
+    tracking: origin/Gebhardt
+  - name: "Gro\xDF"
+    tracking: "origin/Gro\xDF"
+  - name: Gruppe3-Selvaggio
+    tracking: origin/Gruppe3-Selvaggio
+  - name: Gussnecker
+    tracking: origin/Gussnecker
+  - name: master
+    tracking: origin/master
   remoteBranches:
   - name: origin/Dozent
+    tracking: '[None]'
+  - name: origin/Gebhardt
+    tracking: '[None]'
+  - name: "origin/Gro\xDF"
+    tracking: '[None]'
+  - name: origin/Gruppe3-Selvaggio
+    tracking: '[None]'
+  - name: "origin/Gruppe5-St\xE4hle"
+    tracking: '[None]'
+  - name: origin/Gussnecker
+    tracking: '[None]'
+  - name: origin/HEAD
+    tracking: '[None]'
+  - name: origin/master
     tracking: '[None]'
   remotes:
   - name: origin
@@ -31,22 +53,88 @@ MonoBehaviour:
     token: 
   localConfigBranches:
     keys:
-    - Dozent
+    - Gebhardt
+    - "Gro\xDF"
+    - Gruppe3-Selvaggio
+    - Gussnecker
+    - master
     values:
-    - name: Dozent
+    - name: Gebhardt
       remote:
         name: origin
         url: https://github.com/JackStreicher/Game-the-Game.git
-      trackingBranch: Dozent
+      trackingBranch: Gebhardt
+    - name: "Gro\xDF"
+      remote:
+        name: origin
+        url: https://github.com/JackStreicher/Game-the-Game.git
+      trackingBranch: "Gro\xDF"
+    - name: Gruppe3-Selvaggio
+      remote:
+        name: origin
+        url: https://github.com/JackStreicher/Game-the-Game.git
+      trackingBranch: Gruppe3-Selvaggio
+    - name: Gussnecker
+      remote:
+        name: origin
+        url: https://github.com/JackStreicher/Game-the-Game.git
+      trackingBranch: Gussnecker
+    - name: master
+      remote:
+        name: origin
+        url: https://github.com/JackStreicher/Game-the-Game.git
+      trackingBranch: master
   remoteConfigBranches:
     keys:
     - origin
     subKeys:
     - Values:
       - Dozent
+      - Gebhardt
+      - "Gro\xDF"
+      - Gruppe3-Selvaggio
+      - "Gruppe5-St\xE4hle"
+      - Gussnecker
+      - HEAD
+      - master
     subKeyValues:
     - Values:
       - name: Dozent
+        remote:
+          name: origin
+          url: https://github.com/JackStreicher/Game-the-Game.git
+        trackingBranch: 
+      - name: Gebhardt
+        remote:
+          name: origin
+          url: https://github.com/JackStreicher/Game-the-Game.git
+        trackingBranch: 
+      - name: "Gro\xDF"
+        remote:
+          name: origin
+          url: https://github.com/JackStreicher/Game-the-Game.git
+        trackingBranch: 
+      - name: Gruppe3-Selvaggio
+        remote:
+          name: origin
+          url: https://github.com/JackStreicher/Game-the-Game.git
+        trackingBranch: 
+      - name: "Gruppe5-St\xE4hle"
+        remote:
+          name: origin
+          url: https://github.com/JackStreicher/Game-the-Game.git
+        trackingBranch: 
+      - name: Gussnecker
+        remote:
+          name: origin
+          url: https://github.com/JackStreicher/Game-the-Game.git
+        trackingBranch: 
+      - name: HEAD
+        remote:
+          name: origin
+          url: https://github.com/JackStreicher/Game-the-Game.git
+        trackingBranch: 
+      - name: master
         remote:
           name: origin
           url: https://github.com/JackStreicher/Game-the-Game.git

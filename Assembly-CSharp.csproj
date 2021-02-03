@@ -104,7 +104,8 @@
     <Compile Include="Assets\Scripts\UIControler.cs" />
     <Compile Include="Assets\Scripts\UpdateUIQuestList.cs" />
     <Compile Include="Assets\_Scripts\camSwitchScript.cs" />
-    <Compile Include="Assets\camSwitchSecondFloor.cs" />
+    <Compile Include="Assets\_Scripts\camSwitchSecondFloor.cs" />
+    <Compile Include="Assets\_Scripts\companionBehaviour.cs" />
     <None Include="Assets\Materials\Terrain\TerrainSurfaceShader.shader" />
     <None Include="Assets\Sky\Fantasy Skybox FREE\Readme.txt" />
     <None Include="Assets\Materials\Terrain\Terrain World Space Shader.shader" />

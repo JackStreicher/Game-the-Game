@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e43a41fc00947a846819cfbb4cac3913, type: 3}
+  m_Name: Beginning_Dialog
+  m_EditorClassIdentifier: 
+  npcName: Favreau
+  dialogLines:
+  - Stranger!!!
+  - We, the villager from TOWNNAME need your help!
+  - Can u see the vulcano?? Its about to blow up!
+  - Which is why i need your help, to get me up there safely!
+  awaitingQuestCompletion: Get yourself an armor, so we can start our walk!
+  quest: {fileID: 11400000, guid: ae16b28a8e9abf14c9a75d057bfa668c, type: 2}
