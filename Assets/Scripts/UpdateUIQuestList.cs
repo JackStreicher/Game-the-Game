@@ -18,7 +18,7 @@ public class UpdateUIQuestList : MonoBehaviour
     public void Start()
     {
         questlog = GameObject.Find("Questlog").GetComponent<Questlog>();
-        uiQuestList = questlog.GetQuestList();
+        uiQuestList = null;
     }
 
     private void FixedUpdate()
@@ -32,9 +32,10 @@ public class UpdateUIQuestList : MonoBehaviour
         else
         {
             //do sth.
-            if (uiQuestList != questlog.GetQuestList())
+            if (uiQuestList == null || uiQuestList[0] != questlog.GetQuestList()[0] && uiQuestList.Count == questlog.GetQuestList().Count)
             {
                 //erase and Update all QuestButtons
+                EraseAndUpdate();
             }
             counter = 0;
         }
@@ -46,12 +47,13 @@ public class UpdateUIQuestList : MonoBehaviour
 
     private void EraseAndUpdate()
     {
+       
 
         int childCount = transform.childCount;
-        for (int i = 0; i < childCount; i++)
-        {
-            Destroy(transform.GetChild(i));            
-        }
+       for (int i = 0; i < childCount; i++)
+       {
+           Destroy(transform.GetChild(i));            
+       }
 
         uiQuestList = questlog.GetQuestList();
 

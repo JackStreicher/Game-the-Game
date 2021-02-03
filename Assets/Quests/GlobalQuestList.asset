@@ -15,3 +15,4 @@ MonoBehaviour:
   globalQuestList:
   - {fileID: 11400000, guid: ae16b28a8e9abf14c9a75d057bfa668c, type: 2}
   - {fileID: 11400000, guid: 92734289f99e8fd4cabdb0610cfda5fd, type: 2}
+  - {fileID: 11400000, guid: f6a4ef3774582c141b4acd105d49b823, type: 2}
