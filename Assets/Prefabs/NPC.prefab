@@ -151,6 +151,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   npcTag: 0
   npcName: Favreau
+  baseHitpoints: 0
   hitpoints: 500
   level: 2
   difficulty: 1

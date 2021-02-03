@@ -16,11 +16,11 @@ MonoBehaviour:
   description: Get me some Iron Balls
   goals:
   - {fileID: 11400000, guid: b423e3adb62647d44aafd2519c0aa1cc, type: 2}
-  finished: 1
-  completed: 1
+  finished: 0
+  completed: 0
   itemReward:
   - {fileID: 11400000, guid: a3f42236144168448bb6e550bf36a6f2, type: 2}
   goldReward: 300
   childQuests: []
   experienceReward: 300
-  isQuestAccepted: 0
+  isQuestAccepted: 1
