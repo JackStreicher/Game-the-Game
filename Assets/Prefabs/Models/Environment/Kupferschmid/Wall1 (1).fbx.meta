@@ -1,14 +1,8 @@
 fileFormatVersion: 2
-guid: 5b1c8cffde7627e459f94c5a9ec7b7db
+guid: dd182c639e9e7e34583c2a514ce25aae
 ModelImporter:
   serializedVersion: 19301
-  internalIDToNameTable:
-  - first:
-      74: 7107451854344634516
-    second: Cylinder|Close
-  - first:
-      74: -1188737227956769809
-    second: Cylinder|Open
+  internalIDToNameTable: []
   externalObjects: {}
   materials:
     materialImportMode: 1
