@@ -25,7 +25,7 @@ public class RangedHitPoint : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        missleTarget = aim.transform.position;
+        missleTarget = aim.transform.position;       
         ////Shoot a ray through the camera aiming at the Crosshair and get that point in missleRange distance
         //Ray ray = cam.ScreenPointToRay(this.transform.position);
         //
