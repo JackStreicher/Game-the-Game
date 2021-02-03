@@ -89,6 +89,7 @@ public class DialogManager : MonoBehaviour
 
     public void Next()
     {
+        Debug.Log("Pressed");
         if ( dialogPos < conversation.Count - 1)
         {
             dialogPos++;

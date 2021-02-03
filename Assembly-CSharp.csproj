@@ -63,6 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\MartinMove.cs" />
     <Compile Include="Assets\Materials\Terrain\MeshGradient.cs" />
     <Compile Include="Assets\Scripts\Animation Scripts\AnimationController.cs" />
     <Compile Include="Assets\Scripts\Arrow.cs" />
