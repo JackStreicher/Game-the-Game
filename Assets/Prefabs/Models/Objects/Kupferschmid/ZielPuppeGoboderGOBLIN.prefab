@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4101371812955110909}
   - component: {fileID: 1100325791791723096}
   - component: {fileID: 2927853451966858898}
+  - component: {fileID: 2739138394334032976}
   m_Layer: 0
   m_Name: ZielPuppeGoboderGOBLIN
   m_TagString: Untagged
@@ -25,13 +26,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3720306734280828743}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+  m_LocalRotation: {x: -0.7069834, y: 0, z: 0, w: 0.7072302}
   m_LocalPosition: {x: -2.1585, y: 1.373, z: 12.76}
   m_LocalScale: {x: 33.287884, y: 33.287884, z: 33.287884}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: 0}
 --- !u!33 &1100325791791723096
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -80,3 +81,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &2739138394334032976
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3720306734280828743}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4975469668440855522, guid: d30c19be17f99de4dabf0a4c5ca6f923, type: 3}
