@@ -7,7 +7,7 @@ public class Questlog : MonoBehaviour
     [SerializeField]
     private List<Quest> questList = new List<Quest>();
 
-    private Stats playerStats;
+    public Stats playerStats;
 
     public InventoryManager playerInventory;
    
@@ -20,7 +20,7 @@ public class Questlog : MonoBehaviour
     public void Start()
     {
         //Required the GameObject called "Player" to have the Stats script attached
-        playerStats = GameObject.Find("Player").GetComponent<Stats>();
+        //playerStats = GameObject.Find("Player").GetComponent<Stats>();
         //uiQuestList = GameObject.Find("QuestlogContent").GetComponent<UpdateUIQuestList>();
 
         UpdateLocalQuestlist();

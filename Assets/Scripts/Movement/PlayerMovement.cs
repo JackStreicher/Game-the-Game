@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
     public void Start()
     {
         //Put this into a file that's loaded on Startup of the Scene
-        Physics.gravity = new Vector3(0, -30, 0);
+        Physics.gravity = new Vector3(0, -20, 0);
 
         //Gets components from the Parent-GameObject, which is the Empty containing the Rigidbody and the Collider
         //playerMovement = controller.transform.GetComponent<Rigidbody>();
