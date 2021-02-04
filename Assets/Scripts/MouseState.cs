@@ -10,6 +10,7 @@ public class MouseState : MonoBehaviour
     bool lastState;
     int isAcitveCounter = 0;
 
+    public LookMouse mouseRotation;
 
     private void Start()
     {
@@ -34,11 +35,13 @@ public class MouseState : MonoBehaviour
         if (isAcitveCounter > 0)
         {
             isUIActive = true;
+            mouseRotation.isActive = false;
         }
         else if (isAcitveCounter == 0)
         {
 
-            isUIActive = false;            
+            isUIActive = false;
+            mouseRotation.isActive = true;
         }
 
         if (lastState != isUIActive)
