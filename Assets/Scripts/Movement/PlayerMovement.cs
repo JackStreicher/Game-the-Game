@@ -67,7 +67,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (!isGrounded)
         {
-            slow = speed * 0.5f; // sets slow to be 1/2 of the speed while falling/jumping
+            slow = speed * 0.2f; // sets slow to be 1/2 of the speed while falling/jumping
         }
         else
         {

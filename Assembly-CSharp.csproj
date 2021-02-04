@@ -104,7 +104,6 @@
     <Compile Include="Assets\Scripts\Statics\Remover.cs" />
     <Compile Include="Assets\Scripts\UIControler.cs" />
     <Compile Include="Assets\Scripts\UpdateUIQuestList.cs" />
-    <Compile Include="Assets\_Scripts\DayNightCycle.cs" />
     <Compile Include="Assets\_Scripts\camSwitchScript.cs" />
     <None Include="Assets\Materials\Terrain\TerrainSurfaceShader.shader" />
     <None Include="Assets\Sky\Fantasy Skybox FREE\Readme.txt" />
