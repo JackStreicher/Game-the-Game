@@ -15,12 +15,12 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 1
-  m_FogColor: {r: 0.6097131, g: 0.4924975, b: 0.1937867, a: 1}
+  m_FogColor: {r: 0.2337585, g: 0.20880477, b: 0.14521302, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.003
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.76861036, g: 0.6955465, b: 0.5764804, a: 1}
+  m_AmbientSkyColor: {r: 0.48944375, g: 0.4926975, b: 0.7368971, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
@@ -7841,7 +7841,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0.48849848, g: 0.48849848, b: 0.48849848, a: 1}
+  m_Color: {r: 0.36637384, g: 0.36637384, b: 0.36637384, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -7898,7 +7898,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 295769934}
-  m_LocalRotation: {x: 0, y: 0.9961947, z: 0, w: 0.087155804}
+  m_LocalRotation: {x: -0.017003253, y: 0.9770531, z: 0.19434795, w: 0.08548113}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -18859,6 +18859,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 651415942}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &657552277 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1865794549, guid: 2e28d664ea6d8204ca7fa46af2727cfe,
+    type: 3}
+  m_PrefabInstance: {fileID: 8006615347945198688}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 814055bbe57b5c444b4cd15e121f8cc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &670705400
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57101,7 +57113,7 @@ MonoBehaviour:
   MainDirectionalLight: {fileID: 295769935}
   PresetLightScriptableObj: {fileID: 11400000, guid: 43631a756cf657346badc877f1444615,
     type: 2}
-  TimeOfDay: 60
+  TimeOfDay: 45
 --- !u!4 &1595221534
 Transform:
   m_ObjectHideFlags: 0
@@ -67595,6 +67607,10 @@ PrefabInstance:
       propertyPath: crossHair
       value: 
       objectReference: {fileID: 6943354781334771518}
+    - target: {fileID: 1925960769, guid: 2e28d664ea6d8204ca7fa46af2727cfe, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 657552277}
     - target: {fileID: 1979012648, guid: 2e28d664ea6d8204ca7fa46af2727cfe, type: 3}
       propertyPath: playerRef
       value: 
