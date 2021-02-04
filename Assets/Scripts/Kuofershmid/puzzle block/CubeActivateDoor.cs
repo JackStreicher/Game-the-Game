@@ -5,6 +5,8 @@ using UnityEngine;
 public class CubeActivateDoor : MonoBehaviour
 {
     public GameObject cube;
+    public Animator doorAnim;
+    public Animation doorAnimation;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +22,7 @@ public class CubeActivateDoor : MonoBehaviour
     {
         if(other.gameObject == cube)
         {
+            doorAnim.Play("DoorOpen");
             Debug.Log("Cube is in it");
         }
     }
