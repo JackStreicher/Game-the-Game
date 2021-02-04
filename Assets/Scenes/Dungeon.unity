@@ -11010,6 +11010,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 252019534, guid: 2e28d664ea6d8204ca7fa46af2727cfe, type: 3}
+      propertyPath: m_SkinWidth
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 487275859, guid: 2e28d664ea6d8204ca7fa46af2727cfe, type: 3}
       propertyPath: crossHair
       value: 
