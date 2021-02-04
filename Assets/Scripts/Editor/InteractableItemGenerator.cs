@@ -51,7 +51,7 @@ public class InteractableItemGenerator : EditorWindow
 
             case ItemType.armor:
                 itemScriptableObject = (Armor)EditorGUILayout.ObjectField("Scriptable Object Instance (not the script)", itemScriptableObject, typeof(Armor), false);
-                break;
+                break;            
 
             case ItemType.consumable:
                 itemScriptableObject = (Consumable)EditorGUILayout.ObjectField("Scriptable Object Instance (not the script)", itemScriptableObject, typeof(Consumable), false);
@@ -71,7 +71,7 @@ public class InteractableItemGenerator : EditorWindow
             {
                 //holds whatever itemType was chosen
                 Item[] createScriptableObject = new Item[1];
-
+                
                 //we need to instnatiate the model first
                 var instanciatedModel = Instantiate(model);
 

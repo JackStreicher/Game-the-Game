@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8af7d5f3c4f415f4080c659f9a8bbb90, type: 3}
+  m_Name: BranchArmor
+  m_EditorClassIdentifier: 
+  itemName: BranchArmor
+  buyValue: 1
+  sellValue: 0
+  itemPrefab: {fileID: 4541558384528230060, guid: bd5fda0948210284a987f2305ce1ab05,
+    type: 3}
+  itemImage: {fileID: 0}
+  stacksize: 1
+  equipmentSlot: 0
+  armorValue: 1
+  healthModifier: 0
+  staminaModifier: 0

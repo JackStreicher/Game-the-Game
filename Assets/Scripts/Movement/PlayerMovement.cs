@@ -11,12 +11,18 @@ public class PlayerMovement : MonoBehaviour
     public float jumpPower;
 
     //Getting all the Components we need from the Player-Empty
-    private Rigidbody playerRB;
-    private CapsuleCollider playerCollider;
+    public Rigidbody playerRB;
+    //private CapsuleCollider playerCollider;
+    public CharacterController controller;
 
-    private bool isGrounded;
-    
-  
+    public Vector3 velocity;
+    public bool isGroundedPlayer { get; private set; }
+
+    public Vector3 move { get; private set; }
+
+    public float fallSpeed {get; private set;}
+
+    private float prevPosY = 0;
 
     public void Start()
     {
@@ -24,39 +30,67 @@ public class PlayerMovement : MonoBehaviour
         Physics.gravity = new Vector3(0, -30, 0);
 
         //Gets components from the Parent-GameObject, which is the Empty containing the Rigidbody and the Collider
-        playerRB = transform.parent.GetComponent<Rigidbody>();
-        playerCollider = this.transform.parent.GetComponent<CapsuleCollider>();
-       
+        //playerMovement = controller.transform.GetComponent<Rigidbody>();
+        //playerCollider = this.transform.parent.GetComponent<CapsuleCollider>();
+
 
 
         //Load these via PlayerConfig Scriptable Object
         speed = 6f;
         speedModifier = 1.5f;
-        
-        //jumpPower = 2f;
 
+        //jumpPower = 2f;
+        prevPosY = transform.position.y;
     }
 
     public void FixedUpdate()
     {
-        Movement();
-        IsGrounded();
+        //Movement();
+        //IsGrounded();
+        Fallspeed();
+       
     }
 
 
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        Movement();
+
+
+
+        isGroundedPlayer = controller.isGrounded;
+
+        if (isGroundedPlayer && velocity.y < 0)
+        {
+            velocity.y = 0f;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space) && controller.isGrounded)
         {
             Jump();
 
         }
+
+
+
+       
     }
    
+    //put into fixedUpdate
+    public void Fallspeed()
+    {
+        var distance = Math.Abs(prevPosY - transform.parent.position.y);
+        fallSpeed = distance;
+
+        prevPosY = fallSpeed;
+    }
+
+   
+
 
     public void Movement()
     {
-        Vector3 move = transform.up * playerRB.velocity.y;
+        
 
         float slow = 0f; //will be declared at the top later
 
@@ -65,27 +99,31 @@ public class PlayerMovement : MonoBehaviour
 
         //<- an dieser Stelle kommt noch eine Abfrage, ob wir fallen oder nicht
 
-        if (!isGrounded)
-        {
-            slow = speed * 0.2f; // sets slow to be 1/2 of the speed while falling/jumping
-        }
-        else
-        {
-            slow = 0; //no slow
-        }
+       //if (!controller.isGrounded)
+       //{
+       //    slow = speed * 0.2f; // sets slow to be 1/2 of the speed while falling/jumping
+       //}
+       //else
+       //{
+       //    slow = 0; //no slow
+       //}
 
         //Movement Left-Right Forwards-Backwards
         if (Input.GetKey(KeyCode.LeftShift))
         {
             //maximum range for walking
+            move = transform.right * x * ((speed - slow) * speedModifier) //Left - right
+                    + transform.forward * z * ((speed - slow) * speedModifier - slow); // forward, backwards
+                     // gravity
+
             
 
-            move = transform.right * x * ((speed - slow) * speedModifier ) //Left - right
-                    + transform.forward * z * ((speed - slow) * speedModifier - slow) // forward, backwards
-                    + transform.up * playerRB.velocity.y; // gravity
-
+            //move = transform.right * x * ((speed - slow) * speedModifier ) //Left - right
+            //        + transform.forward * z * ((speed - slow) * speedModifier - slow) // forward, backwards
+            //        + transform.up * playerMovement.velocity.y; // gravity
+            //
             //set the Speed of the RigidBody
-            playerRB.velocity = move;
+            //playerMovement.velocity = move;
             
            
 
@@ -103,28 +141,42 @@ public class PlayerMovement : MonoBehaviour
                 slow = speed * 0.333f;
             }
             move = transform.right * x * (speed - slow) //Left - right
-                    + transform.forward * z * (speed - slow) // forward, backwards
-                    + transform.up * playerRB.velocity.y; // gravity
+                    + transform.forward * z * (speed - slow); // forward, backwards
+                    // gravity
 
-            playerRB.velocity = move;
 
-          
+            
+
+            //move = transform.right * x * (speed - slow) //Left - right
+            //        + transform.forward * z * (speed - slow) // forward, backwards
+            //        + transform.up * playerMovement.velocity.y; // gravity
+            //
+            //playerMovement.velocity = move;
+
+
 
         }
 
+        //Debug.Log("Moving " + move);
 
+        velocity.y +=  3f * -9.81f * Time.deltaTime;
+        controller.Move((move + velocity ) * Time.deltaTime);
     }
 
 
     public void Jump()
     {
         //Jump
-    
-        playerRB.velocity += transform.up * jumpPower;
-        isGrounded = false;
+
+
+        //playerMovement.velocity += transform.up * jumpPower;
+        velocity.y += Mathf.Sqrt(jumpPower * -3.0f * -9.81f);
+        
+            
+        
     }
 
-
+    /*
     public void IsGrounded()
     {
     
@@ -177,4 +229,5 @@ public class PlayerMovement : MonoBehaviour
 
 
     }
+    */
 }
