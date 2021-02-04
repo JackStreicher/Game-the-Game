@@ -10,7 +10,7 @@ public class SpawnFireBall : MonoBehaviour
 
     private GameObject effectToSpawn;                                       //Feuerball (wird im start mitgegeben)                         
     private float timeToFire = 0;                                           //Steuert wie oft der spieler schießen kann          
-
+    public GameObject cam;                                                  //Um rotation zu verwenden
 
     void Start()
     {
@@ -33,9 +33,9 @@ public class SpawnFireBall : MonoBehaviour
 
         if (firePoint != null)  
         {
+            //Instanziieren
             fireballs = Instantiate(effectToSpawn, firePoint.transform.position, Quaternion.identity);
-
-                fireballs.transform.localRotation = player.transform.rotation;
+            fireballs.GetComponent<FireBallMove>().firepoint = firePoint;
         }
         else
         {

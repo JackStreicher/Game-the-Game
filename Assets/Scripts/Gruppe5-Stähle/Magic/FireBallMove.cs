@@ -6,7 +6,14 @@ public class FireBallMove : MonoBehaviour
 {
     public float speedOfTheFB;
     public float speedOfFireMode;
+    public GameObject firepoint;
 
+
+    public void Start()
+    {
+        Debug.Log(transform.rotation);
+        transform.rotation = Quaternion.LookRotation(firepoint.transform.forward);
+    }
     void Update()
     {
         //wenn speed nicht null ist dann ...

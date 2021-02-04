@@ -35076,6 +35076,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1222778765}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1224130014 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1100838043782492702, guid: 2e28d664ea6d8204ca7fa46af2727cfe,
+    type: 3}
+  m_PrefabInstance: {fileID: 8006615347945198688}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1224704767
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -56236,6 +56242,7 @@ MonoBehaviour:
   player: {fileID: 1449222338}
   fireBallsList:
   - {fileID: 5912266697930086234, guid: 28a9373a18a04a64383142a6cd1b56e5, type: 3}
+  cam: {fileID: 1224130014}
 --- !u!4 &1505978290
 Transform:
   m_ObjectHideFlags: 0
