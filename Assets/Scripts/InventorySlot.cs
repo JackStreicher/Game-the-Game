@@ -6,13 +6,14 @@ public class InventorySlot : MonoBehaviour
 {   
     public int number;
 
-    protected EquipmentManager equipmentManager;
-    protected InventoryManager inventory;  //needed for the Item at the itemarray position
+    public EquipmentManager equipmentManager;
+    public InventoryManager inventory;  //needed for the Item at the itemarray position
 
+    //public InventoryManager
     public void Start()
     {
-        equipmentManager = GameObject.Find("Equipment").GetComponent<EquipmentManager>(); //needed for adding ITems to the slots of the UI and the PLayer GO
-        inventory = GameObject.Find("Inventory").GetComponent<InventoryUIConnection>().inventory; //needed for adding ITems to the slots of the UI and the PLayer GO
+        //equipmentManager = GameObject.Find("Equipment").GetComponent<EquipmentManager>(); //needed for adding ITems to the slots of the UI and the PLayer GO
+        //inventory = GameObject.Find("Inventory").GetComponent<InventoryUIConnection>().inventory; //needed for adding ITems to the slots of the UI and the PLayer GO
           
     }
 

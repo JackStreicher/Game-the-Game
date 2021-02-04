@@ -10,6 +10,8 @@ public class DialogManager : MonoBehaviour
     public GameObject acceptQuestBtn;
     public GameObject completeQuestBtn;
     public GameObject dialogPanel;
+
+    public LookMouse mouseRot;
     #endregion
 
     #region Dialog-Variables
@@ -41,13 +43,15 @@ public class DialogManager : MonoBehaviour
 
     public void StartDialog(Dialog diag)
     {
-        Cursor.lockState = CursorLockMode.None;
+        Cursor.lockState = CursorLockMode.None;        
         npcNameField.text = diag.npcName;
         conversation = diag.dialogLines;
         dialogPos = 0;
         currentDialog = diag;        
         dialogPanel.SetActive(true);//Activate Panel
+      
         ShowDialog();
+        
     }
 
     public void AcceptQuest()
@@ -68,11 +72,13 @@ public class DialogManager : MonoBehaviour
     public void ShowDialog()
     {
         dialogTextField.text = conversation[dialogPos];
+        
     }
 
     public void ShowDialog(string text)
     {
         dialogTextField.text = text;
+        
     }
 
     //Special Case
@@ -84,7 +90,9 @@ public class DialogManager : MonoBehaviour
     public void StopDialog()
     {
         dialogPanel.SetActive(false);
+       
         Cursor.lockState = CursorLockMode.Locked;
+      
     }
 
     public void Next()

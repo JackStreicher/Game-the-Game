@@ -36,11 +36,13 @@ public class Shoot : MonoBehaviour
     {
         anim = transform.GetComponent<Animator>();
         animContrl = transform.GetComponent<AnimationController>();
-        targetPos = GameObject.Find("CrossHair").GetComponent<RangedHitPoint>().missleTarget;
+        targetPos = GameObject.Find("CrossHair").GetComponent<RangedHitPoint>().aim.transform.position;
     }
 
     public void FixedUpdate()
     {
+        drawPowerIncrement = projectile.GetComponent<Arrow>().basePower / 60;
+
         //Cooldown after firing an arrow
         if (!canFire)
         {
@@ -60,7 +62,8 @@ public class Shoot : MonoBehaviour
         {
             drawPower += drawPowerIncrement;
 
-            drawPower = Mathf.Clamp(drawPower,5,projectile.GetComponent<Arrow>().basePower);
+            drawPower = Mathf.Clamp(drawPower,20,projectile.GetComponent<Arrow>().basePower);
+            Debug.Log("Current Power " + projectile.GetComponent<Arrow>().basePower);
         }
         else{
             drawPower = 5;
