@@ -9,10 +9,10 @@ public class Arrow : MonoBehaviour
     Rigidbody rb;
 
     //Longow Power: 400-480 Newton
-    public float basePower { get; private set; } = 55;
-    private float power = 55;
+    public float basePower = 80f;
+    private float power;
 
-    public float damage;
+    private float damage;
 
     public Transform parentTrans;
 
@@ -27,6 +27,8 @@ public class Arrow : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
+        
+        power = basePower;
         rb = GetComponent<Rigidbody>();
         rb.transform.GetComponent<CapsuleCollider>().enabled = false;
         rb.useGravity = false;
@@ -38,6 +40,7 @@ public class Arrow : MonoBehaviour
 
     public void Fire(Vector3 dir)
     {
+        damage = power;
         StartCoroutine(FireCo(dir));
      
     }
@@ -47,8 +50,9 @@ public class Arrow : MonoBehaviour
         parentTrans = null;
         transform.LookAt(tar);
         //Debug.Log(tar);
-        rb.AddForce(transform.forward * power, ForceMode.VelocityChange);
-        rb.AddTorque(transform.forward * 80, ForceMode.Impulse);
+        rb.AddForce(transform.forward * power, ForceMode.Impulse);
+        Debug.Log("Power" + power);
+        //rb.AddTorque(transform.forward * 80, ForceMode.Impulse);
         //transform.Rotate(-15, 0, 0);
         rb.useGravity = true;
         
@@ -140,7 +144,16 @@ public class Arrow : MonoBehaviour
            
             
     
-            Debug.Log("Hit Target Enemy" + damage);
+            //Debug.Log("Hit Target Enemy" + damage);
+        }
+        else
+        {
+            rb.useGravity = false;
+            rb.isKinematic = true;
+            rb.velocity = Vector3.zero;
+            this.transform.position += transform.forward * power / 250; //depth of being stuck inside the NPC/wall
+            this.transform.SetParent(collision.transform);
+
         }
     }
     
@@ -150,7 +163,7 @@ public class Arrow : MonoBehaviour
     {
 
         power = newPower;
-        damage = power;
+        damage = power * 3/4;
 
     }
     public float GetProjectilePower()

@@ -11,6 +11,7 @@ public class RangedHitPoint : MonoBehaviour
     public Vector3 missleTarget;
     //public float missleRange;
     public GameObject aim;
+    public Vector3 offset;
 
     private GameObject cameraParent;
 
@@ -26,7 +27,7 @@ public class RangedHitPoint : MonoBehaviour
     void Update()
     {
         missleTarget = aim.transform.position;
-        this.transform.position = cam.WorldToScreenPoint(aim.transform.position);
+        this.transform.position = offset + cam.WorldToScreenPoint(aim.transform.position);
         ////Shoot a ray through the camera aiming at the Crosshair and get that point in missleRange distance
         //Ray ray = cam.ScreenPointToRay(this.transform.position);
         //
