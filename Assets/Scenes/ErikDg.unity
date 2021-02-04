@@ -14530,7 +14530,7 @@ GameObject:
   - component: {fileID: 475561485}
   - component: {fileID: 475561486}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: triggerPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14624,6 +14624,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cube: {fileID: 1182886444}
+  animMaster: {fileID: 71107967}
 --- !u!54 &475561485
 Rigidbody:
   m_ObjectHideFlags: 0
