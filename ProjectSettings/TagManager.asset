@@ -9,6 +9,7 @@ TagManager:
   - Friendly
   - Enemy
   - Neutral
+  - CantMove
   layers:
   - Default
   - TransparentFX
