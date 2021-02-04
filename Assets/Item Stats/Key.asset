@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff12254c98d7b604cbccc3a5d501ac58, type: 3}
-  m_Name: Shield
+  m_Name: Key
   m_EditorClassIdentifier: 
   itemName: 
   buyValue: 0
   sellValue: 0
-  itemPrefab: {fileID: 4551845329665280707, guid: 17cb2d0d16d97d23a820f75e3d911790,
+  itemPrefab: {fileID: 919132149155446097, guid: d3eadd807aed955f8a4fa6beb96d371b,
     type: 3}
   itemImage: {fileID: 0}
   stacksize: 1
-  equipmentSlot: 26
+  equipmentSlot: 10
