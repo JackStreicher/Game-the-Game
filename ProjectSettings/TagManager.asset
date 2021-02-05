@@ -9,7 +9,6 @@ TagManager:
   - Friendly
   - Enemy
   - Neutral
-  - Healing
   layers:
   - Default
   - TransparentFX

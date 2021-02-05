@@ -76,11 +76,7 @@
     <Compile Include="Assets\Scripts\Gruppe5-Stähle\DayAndNight\LightingManager.cs" />
     <Compile Include="Assets\Scripts\Gruppe5-Stähle\DayAndNight\LightingPreset.cs" />
     <Compile Include="Assets\Scripts\Gruppe5-Stähle\Magic\FireBallMove.cs" />
-    <Compile Include="Assets\Scripts\Gruppe5-Stähle\Magic\HealUP.cs" />
-    <Compile Include="Assets\Scripts\Gruppe5-Stähle\Magic\Mana.cs" />
     <Compile Include="Assets\Scripts\Gruppe5-Stähle\Magic\SpawnFireBall.cs" />
-    <Compile Include="Assets\Scripts\Gruppe5-Stähle\Magic\SpawnShield.cs" />
-    <Compile Include="Assets\Scripts\Gruppe5-Stähle\Magic\TriggerHealingSound.cs" />
     <Compile Include="Assets\Scripts\Gruppe5-Stähle\Water\WaterMove.cs" />
     <Compile Include="Assets\Scripts\Gruppe5-Stähle\Water\WaterPlane.cs" />
     <Compile Include="Assets\Scripts\InventorySlot.cs" />
