@@ -63131,7 +63131,7 @@ Transform:
   - {fileID: 1505978290}
   - {fileID: 1390453007}
   m_Father: {fileID: 1449222339}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1836063489 stripped
 GameObject:
@@ -69524,6 +69524,21 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8790337197663253546, guid: 2e28d664ea6d8204ca7fa46af2727cfe,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1449222338}
+    - target: {fileID: 8790337197663253546, guid: 2e28d664ea6d8204ca7fa46af2727cfe,
+        type: 3}
+      propertyPath: isActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8790337197663253546, guid: 2e28d664ea6d8204ca7fa46af2727cfe,
+        type: 3}
+      propertyPath: rotationXTarget
+      value: 
+      objectReference: {fileID: 1224130014}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e28d664ea6d8204ca7fa46af2727cfe, type: 3}
 --- !u!114 &8006615347945198689 stripped
