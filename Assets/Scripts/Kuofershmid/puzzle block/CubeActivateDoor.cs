@@ -6,25 +6,38 @@ public class CubeActivateDoor : MonoBehaviour
 {
     public GameObject cube;
 
-    public Animator animMaster;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject door;
+    public float timeUntilDes;
+    public float speed;
+    public int up;
+    bool isOpen = false;
+        //fickt euch einfach nur selbst 
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(isOpen == true)
+        {
+            StartCoroutine(desDoor());
+
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject == cube)
         {
-            animMaster.SetTrigger("open");
+            isOpen = true;
             Debug.Log("Cube is in it");
         }
+    }
+    public IEnumerator desDoor()
+    {
+        for(int i = 0; i <= up;)
+        {
+            door.transform.Translate(Vector3.up *speed * Time.deltaTime);
+            i++;
+        }
+        yield return new WaitForSeconds(timeUntilDes);
+        isOpen = false;
     }
 }
