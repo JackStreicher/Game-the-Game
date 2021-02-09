@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Mana : MonoBehaviour
 {
@@ -13,11 +14,13 @@ public class Mana : MonoBehaviour
     private int passiveRegTimeInFrames = 50;
     float passiveRegAmount = 1f;
 
-  
+
+    public Slider ManaBar;
 
     private void FixedUpdate()
     {
-        PassiveRegeneration();    
+        PassiveRegeneration();
+        ManaBar.value = currentMana;
     }
 
     public void PassiveRegeneration()

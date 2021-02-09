@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealUP : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class HealUP : MonoBehaviour
     public List<GameObject> healingList = new List<GameObject>();   //Liste 
     private GameObject healing;
     private GameObject destroyIt;
+    public Slider HealthBar;                                        //Lebensbalken
     public Mana mana;                                               //mana einbinden
 
     //Variables
@@ -25,11 +27,12 @@ public class HealUP : MonoBehaviour
 
     private void Start()
     {
-
+        
         healing = healingList[0];
         healingPrefab = healing;
         maxHealth = player.GetComponent<Stats>().baseHitpoints;
         healthNow = player.GetComponent<Stats>().currentHitpoints;
+        HealthBar.value = healthNow;
     }
 
 
@@ -70,6 +73,9 @@ public class HealUP : MonoBehaviour
     {
         //Aktuallisiert wie viel Leben der Spieler hat
         healthNow = player.GetComponent<Stats>().currentHitpoints;
+
+        //Lebensbalken Updaten
+        HealthBar.value = healthNow;
     }
 
     private void postionOfHealingAnimation()

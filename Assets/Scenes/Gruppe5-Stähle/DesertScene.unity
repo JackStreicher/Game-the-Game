@@ -9023,6 +9023,7 @@ MonoBehaviour:
   player: {fileID: 1449222338}
   healingList:
   - {fileID: 9205161128344789850, guid: fc451aadbf4c240469d4e29789974108, type: 3}
+  HealthBar: {fileID: 0}
   mana: {fileID: 1505978292}
   healthGettingValue: 25
   healtGettingValuePerTic: 1
@@ -60440,7 +60441,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxMana: 100
   currentMana: 0
-  timeToReloadManaPoints: 0.5
+  isPassiveRegeneration: 1
+  passiveRegCounter: 0
+  ManaBar: {fileID: 1928151385}
 --- !u!1 &1520165674 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0730453d6b2f5994980c06896526f621,
@@ -67787,6 +67790,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1e9c8aa0bf683441abfd2ca64791158, type: 3}
+--- !u!114 &1928151385 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2314795923148924225, guid: fa4435909b48f354da82409d055ff4c2,
+    type: 3}
+  m_PrefabInstance: {fileID: 6943354781334771507}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1932477225
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -78968,6 +78983,56 @@ PrefabInstance:
       propertyPath: questItemList
       value: 
       objectReference: {fileID: 8006615347945198689}
+    - target: {fileID: 2314795922546437871, guid: fa4435909b48f354da82409d055ff4c2,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2314795922546437871, guid: fa4435909b48f354da82409d055ff4c2,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2314795922546437871, guid: fa4435909b48f354da82409d055ff4c2,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2314795922746376207, guid: fa4435909b48f354da82409d055ff4c2,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2314795922746376207, guid: fa4435909b48f354da82409d055ff4c2,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2314795924005313854, guid: fa4435909b48f354da82409d055ff4c2,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2314795924005313854, guid: fa4435909b48f354da82409d055ff4c2,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2314795924309118649, guid: fa4435909b48f354da82409d055ff4c2,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2314795924309118649, guid: fa4435909b48f354da82409d055ff4c2,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2314795924309118649, guid: fa4435909b48f354da82409d055ff4c2,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7839227235603795434, guid: fa4435909b48f354da82409d055ff4c2,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
