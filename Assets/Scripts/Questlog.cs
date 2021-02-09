@@ -50,7 +50,7 @@ public class Questlog : MonoBehaviour
 
         foreach (Quest quest in globalQuestList.globalQuestList)
         {
-            if (!quest.finished && quest.isQuestAccepted)
+            if (!quest.completed && quest.isQuestAccepted)
             {
                 newList.Add(quest);
             }
@@ -101,11 +101,11 @@ public class Questlog : MonoBehaviour
         UpdateLocalQuestlist();
     }
 
-    public void GrantRewards(int gold, int xP, List<Item> items, Quest quest, bool resetQuest)
+    public bool GrantRewards(int gold, int xP, List<Item> items, Quest quest, bool resetQuest)
     {
         bool successful = false;
 
-        if (items.Count >= 0 && items != null)
+        if (items.Count >= 0 && items.Count > 0)
         {
 
             foreach (var newItem in items)
@@ -127,6 +127,7 @@ public class Questlog : MonoBehaviour
         else
         {
             successful = true;
+            quest.completed = true;
         }
 
         if (successful)
@@ -135,6 +136,8 @@ public class Questlog : MonoBehaviour
             playerStats.AddExperience(xP);
             RemoveQuestFromLog(quest, resetQuest);
         }
+
+        return successful;
     }
 
     public void RemoveQuestFromLog(Quest quest, bool resetQuest)
