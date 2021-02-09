@@ -76,6 +76,7 @@
     <Compile Include="Assets\Scripts\InventoryUIConnection.cs" />
     <Compile Include="Assets\Scripts\ItemDrop.cs" />
     <Compile Include="Assets\Scripts\ItemStats.cs" />
+    <Compile Include="Assets\Scripts\Kuofershmid\puzzle block\BaseAi.cs" />
     <Compile Include="Assets\Scripts\Kuofershmid\puzzle block\CubeActivateDoor.cs" />
     <Compile Include="Assets\Scripts\Kuofershmid\puzzle block\MoveBlock.cs" />
     <Compile Include="Assets\Scripts\Kuofershmid\puzzle block\StopBlock.cs" />
