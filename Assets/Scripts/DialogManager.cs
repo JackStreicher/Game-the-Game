@@ -11,6 +11,7 @@ public class DialogManager : MonoBehaviour
     public GameObject completeQuestBtn;
     public GameObject dialogPanel;
 
+
     public LookMouse mouseRot;
     #endregion
 
@@ -126,6 +127,11 @@ public class DialogManager : MonoBehaviour
         {
             acceptQuestBtn.SetActive(false);
             completeQuestBtn.SetActive(false);
+        }
+
+        if (currentDialog.quest.completed == true)
+        {
+            ShowDialog(currentDialog.questDone);
         }
     }
 
