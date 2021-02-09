@@ -77,6 +77,7 @@ public class Questlog : MonoBehaviour
                 var currentGoal = questList[i].GetGoals()[j];
                
                 //Checks if the item/monster  we just picked up/ destroyed contains the string we need for our goal
+                //The Prefab must have the shortest possible name Example: Not Prefab Artefact Vafriant, but Artefact
                 if (possibleGoal.name.Contains(currentGoal.goal.name) && currentGoal.goalType != Goal.GoalType.Find)
                 {                    
 
