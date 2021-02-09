@@ -6,10 +6,26 @@ public class DamageThePlayer : MonoBehaviour
 {
     public int damageThePl;
     public string tagName;
+    bool isDamaged = false;
+    public static int plDamageCalc;
+    public static bool plDamage = false;
     // Start is called before the first frame update
-    private void OnCollisionEnter(Collision collision)
+
+    public void Start()
     {
-        if(collision.gameObject.tag == tagName)
+        plDamageCalc = damageThePl;
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == tagName)
+        {
+            isDamaged = true;
+            plDamage = isDamaged;
+        }
+    }
+    private void Update()
+    {
+        if (isDamaged)
         {
             DamageCalc();
         }
@@ -17,6 +33,9 @@ public class DamageThePlayer : MonoBehaviour
 
     public void DamageCalc()
     {
+        
         Helth.health -= damageThePl;
+        isDamaged = false;
+        Debug.Log("bis hier her");
     }
 }

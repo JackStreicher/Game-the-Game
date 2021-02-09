@@ -30,6 +30,11 @@ public class Helth : MonoBehaviour
         {
             DamageCalc();
         }
+        if (DamageThePlayer.plDamage == true)
+        {
+            health -= DamageThePlayer.plDamageCalc;
+        }
+     
     }
 
     private void OnCollisionEnter(Collision col)
@@ -42,9 +47,13 @@ public class Helth : MonoBehaviour
     }
     public void DamageCalc()
     {
-        health -= damage;
-        Debug.Log(health);
-        isHit = false;
+        if (!isPlayer)
+        {
+            health -= damage;
+            Debug.Log(health);
+            isHit = false;
+
+        }
 
     }
 }
