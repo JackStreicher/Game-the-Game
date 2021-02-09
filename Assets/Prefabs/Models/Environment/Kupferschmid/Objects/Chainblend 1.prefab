@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8360351146688608061}
   - component: {fileID: 6119244838272001729}
   - component: {fileID: 3636735445556415474}
-  - component: {fileID: 7776276230726587127}
   m_Layer: 0
   m_Name: Torus.003
   m_TagString: Untagged
@@ -80,22 +79,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &7776276230726587127
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 70257704478955623}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &478303893282798128
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,7 +90,6 @@ GameObject:
   - component: {fileID: 6355228252442439533}
   - component: {fileID: 9185482452103687335}
   - component: {fileID: 461625174123527226}
-  - component: {fileID: 6162290824334080618}
   m_Layer: 0
   m_Name: Torus.006
   m_TagString: Untagged
@@ -176,22 +158,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &6162290824334080618
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 478303893282798128}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &1293788154131818055
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,7 +169,6 @@ GameObject:
   - component: {fileID: 2636542412509261760}
   - component: {fileID: 8958301745369403951}
   - component: {fileID: 2643984792825193369}
-  - component: {fileID: 4813474454187281377}
   m_Layer: 0
   m_Name: Torus.014
   m_TagString: Untagged
@@ -272,22 +237,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &4813474454187281377
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1293788154131818055}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &1343666723823209618
 GameObject:
   m_ObjectHideFlags: 0
@@ -299,7 +248,6 @@ GameObject:
   - component: {fileID: 3705838730078227611}
   - component: {fileID: 5888649953809812000}
   - component: {fileID: 8509627374923202699}
-  - component: {fileID: 6308201594333468286}
   m_Layer: 0
   m_Name: Torus.007
   m_TagString: Untagged
@@ -368,22 +316,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &6308201594333468286
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1343666723823209618}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &1566336283723978690
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,7 +327,6 @@ GameObject:
   - component: {fileID: 2498596405163782911}
   - component: {fileID: 6411555732570966655}
   - component: {fileID: 633914433984509098}
-  - component: {fileID: 8559962484750304331}
   m_Layer: 0
   m_Name: Torus.013
   m_TagString: Untagged
@@ -464,22 +395,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &8559962484750304331
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1566336283723978690}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &2019594319485312277
 GameObject:
   m_ObjectHideFlags: 0
@@ -570,7 +485,6 @@ GameObject:
   - component: {fileID: 2963752043531305504}
   - component: {fileID: 5138486632786915809}
   - component: {fileID: 2095002307750415089}
-  - component: {fileID: 263512459413945293}
   m_Layer: 0
   m_Name: Torus.017
   m_TagString: Untagged
@@ -639,22 +553,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &263512459413945293
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2188594841551734618}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &2440327456343989537
 GameObject:
   m_ObjectHideFlags: 0
@@ -666,7 +564,6 @@ GameObject:
   - component: {fileID: 4755290900979761644}
   - component: {fileID: 4706712338193817504}
   - component: {fileID: 2270787535531309336}
-  - component: {fileID: 3612709144826794460}
   m_Layer: 0
   m_Name: Torus.002
   m_TagString: Untagged
@@ -735,22 +632,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &3612709144826794460
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2440327456343989537}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &2861128002244819462
 GameObject:
   m_ObjectHideFlags: 0
@@ -762,7 +643,6 @@ GameObject:
   - component: {fileID: 4244015523082189537}
   - component: {fileID: 1693692317546046811}
   - component: {fileID: 9369598358545487}
-  - component: {fileID: 3768878897605191150}
   m_Layer: 0
   m_Name: Torus.005
   m_TagString: Untagged
@@ -831,22 +711,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &3768878897605191150
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2861128002244819462}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &2883217371148596111
 GameObject:
   m_ObjectHideFlags: 0
@@ -858,7 +722,6 @@ GameObject:
   - component: {fileID: 7157374469861064974}
   - component: {fileID: 7431856708500777927}
   - component: {fileID: 6809597048705791810}
-  - component: {fileID: 2846604437356581603}
   m_Layer: 0
   m_Name: Torus.010
   m_TagString: Untagged
@@ -927,22 +790,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &2846604437356581603
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2883217371148596111}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &3522927920331061223
 GameObject:
   m_ObjectHideFlags: 0
@@ -954,7 +801,6 @@ GameObject:
   - component: {fileID: 8469835950295643814}
   - component: {fileID: 9054283972807937054}
   - component: {fileID: 6498313259164414329}
-  - component: {fileID: 8497876732063660061}
   m_Layer: 0
   m_Name: Torus.011
   m_TagString: Untagged
@@ -1023,22 +869,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &8497876732063660061
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3522927920331061223}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &3883334456020268110
 GameObject:
   m_ObjectHideFlags: 0
@@ -1050,7 +880,6 @@ GameObject:
   - component: {fileID: 6741693689046210697}
   - component: {fileID: 2320603933770699264}
   - component: {fileID: 8313813143419914510}
-  - component: {fileID: 1491854205818403416}
   m_Layer: 0
   m_Name: Torus.012
   m_TagString: Untagged
@@ -1119,22 +948,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &1491854205818403416
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3883334456020268110}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &4606423054321201792
 GameObject:
   m_ObjectHideFlags: 0
@@ -1194,7 +1007,6 @@ GameObject:
   - component: {fileID: 8867179420087981460}
   - component: {fileID: 915674614293267501}
   - component: {fileID: 6301253133496039704}
-  - component: {fileID: 8512592257695378694}
   m_Layer: 0
   m_Name: Torus
   m_TagString: Untagged
@@ -1263,22 +1075,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &8512592257695378694
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5313626354958829518}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &5486998142551885493
 GameObject:
   m_ObjectHideFlags: 0
@@ -1290,7 +1086,6 @@ GameObject:
   - component: {fileID: 8930328717547255330}
   - component: {fileID: 4758068225657104630}
   - component: {fileID: 6415717448244529818}
-  - component: {fileID: 4796879261577249946}
   m_Layer: 0
   m_Name: Torus.015
   m_TagString: Untagged
@@ -1359,22 +1154,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &4796879261577249946
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5486998142551885493}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &5897219706867618111
 GameObject:
   m_ObjectHideFlags: 0
@@ -1386,7 +1165,6 @@ GameObject:
   - component: {fileID: 8097525986886433621}
   - component: {fileID: 97032967474681336}
   - component: {fileID: 7980842868453353397}
-  - component: {fileID: 2951487082969048312}
   m_Layer: 0
   m_Name: Torus.016
   m_TagString: Untagged
@@ -1455,22 +1233,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &2951487082969048312
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5897219706867618111}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &6690614945606461989
 GameObject:
   m_ObjectHideFlags: 0
@@ -1482,7 +1244,6 @@ GameObject:
   - component: {fileID: 4939648102158389622}
   - component: {fileID: 4808824152227215286}
   - component: {fileID: 5368214944156198768}
-  - component: {fileID: 5969906086785759854}
   m_Layer: 0
   m_Name: Torus.009
   m_TagString: Untagged
@@ -1551,22 +1312,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &5969906086785759854
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6690614945606461989}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &7917112952468581800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1578,7 +1323,6 @@ GameObject:
   - component: {fileID: 895468378590586165}
   - component: {fileID: 6228126117958889870}
   - component: {fileID: 4099769522231492922}
-  - component: {fileID: 9195513435091341397}
   m_Layer: 0
   m_Name: Torus.008
   m_TagString: Untagged
@@ -1647,22 +1391,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &9195513435091341397
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7917112952468581800}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &8119350946214659505
 GameObject:
   m_ObjectHideFlags: 0
@@ -1674,7 +1402,6 @@ GameObject:
   - component: {fileID: 4172670546782438757}
   - component: {fileID: 1908676654428719742}
   - component: {fileID: 1298580824001090712}
-  - component: {fileID: 3417191489648408407}
   m_Layer: 0
   m_Name: Torus.004
   m_TagString: Untagged
@@ -1743,19 +1470,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!54 &3417191489648408407
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8119350946214659505}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
