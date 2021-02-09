@@ -7,9 +7,9 @@ public class CubeActivateDoor : MonoBehaviour
     public GameObject cube;
 
     public GameObject door;
-    public float timeUntilDes;
-    public float speed;
-    public int up;
+    private float timeUntilDes = 6;
+    private float speed = 0.02f;
+    private int up = 1000;
     bool isOpen = false;
         //fickt euch einfach nur selbst 
 
