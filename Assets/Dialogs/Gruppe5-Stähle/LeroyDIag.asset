@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e43a41fc00947a846819cfbb4cac3913, type: 3}
+  m_Name: LeroyDIag
+  m_EditorClassIdentifier: 
+  npcName: Leroy
+  dialogLines:
+  - Nice to meet you!
+  - If you want to get some gold, I've got some tasks for you!
+  - Since years we are searching for artefacts of an old civilisation. We've only
+    found one so far, but it held a hint for more artefacts.
+  - It spoke to us and told us that there is an artefact at the beginning of the
+    world. We don't know more.
+  - Can you help us? If you find and hand us the artefacts, I will let gold rain
+    upon you.
+  awaitingQuestCompletion: Have you found them all?
+  questDone: Thank you for your service
+  quest: {fileID: 11400000, guid: b3244541642659745843643848918db0, type: 2}

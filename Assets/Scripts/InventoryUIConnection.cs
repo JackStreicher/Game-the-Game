@@ -23,7 +23,7 @@ public class InventoryUIConnection : MonoBehaviour
 
                 itemSlots[i].transform.GetChild(0).GetComponent<Text>().text = "";
 
-                //If the first child is not a Text it will look for the Child via a string (name search) .
+                //If the first child is not a Text it will look for the Child via a string (name search)
                 if (itemSlots[i].transform.GetChild(0).GetComponent<Text>() == null)
                 {
                     itemSlots[i].transform.Find("Amount").GetComponent<Text>().text = "";
