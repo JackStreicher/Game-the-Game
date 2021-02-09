@@ -64,6 +64,10 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Editor\InteractableItemGenerator.cs" />
     <Compile Include="Assets\Scripts\Editor\QuestGenerator.cs" />
+    <Compile Include="Assets\VLights\Editor\VolumeLightAbout.cs" />
+    <Compile Include="Assets\VLights\Editor\VolumeLightCreator.cs" />
+    <Compile Include="Assets\VLights\Editor\VolumeLightManagerEditor.cs" />
+    <Compile Include="Assets\VLights\Editor\VolumeLightSlicedBasedEditor.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.18f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
