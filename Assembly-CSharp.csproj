@@ -78,6 +78,8 @@
     <Compile Include="Assets\Scripts\ItemStats.cs" />
     <Compile Include="Assets\Scripts\Kuofershmid\puzzle block\BaseAi.cs" />
     <Compile Include="Assets\Scripts\Kuofershmid\puzzle block\CubeActivateDoor.cs" />
+    <Compile Include="Assets\Scripts\Kuofershmid\puzzle block\DamageThePlayer.cs" />
+    <Compile Include="Assets\Scripts\Kuofershmid\puzzle block\Helth.cs" />
     <Compile Include="Assets\Scripts\Kuofershmid\puzzle block\MoveBlock.cs" />
     <Compile Include="Assets\Scripts\Kuofershmid\puzzle block\StopBlock.cs" />
     <Compile Include="Assets\Scripts\MouseState.cs" />
