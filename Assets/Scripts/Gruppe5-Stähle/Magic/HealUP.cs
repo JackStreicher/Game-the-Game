@@ -21,10 +21,13 @@ public class HealUP : MonoBehaviour
     private bool isHealingActive = false;                           //Boolean um Healing zu handeln  
     public int manaPointsCost = 30;                                 //Kosten Mana
 
+    GameObject healingPrefab;
+
     private void Start()
     {
 
         healing = healingList[0];
+        healingPrefab = healing;
         maxHealth = player.GetComponent<Stats>().baseHitpoints;
         healthNow = player.GetComponent<Stats>().currentHitpoints;
     }
@@ -57,7 +60,7 @@ public class HealUP : MonoBehaviour
         isHealingActive = true;                                                             //boolean auf true setzen da der Spieler sich anfängt zu heilen
 
 
-        healing = Instantiate(healing, player.transform.position, Quaternion.identity);     //Heilungsanimation
+        healing = Instantiate(healingPrefab, player.transform.position, Quaternion.identity);     //Heilungsanimation
 
 
         StartCoroutine(HealingCourtine());                                                  //Spielerleben wird hinzugefügt                                              
@@ -97,16 +100,21 @@ public class HealUP : MonoBehaviour
 
         finished = true;
         yield return new WaitUntil(() => finished == true);   //Sobald es true ist geht es weiter
-        
-        
 
-        
-        //Die Heilanimation muss verschwinden
+
         destroyIt = GameObject.FindGameObjectWithTag("Healing");
-        Destroy(destroyIt);
 
-        yield return new WaitForSeconds(1.5f);     //künstlichen Delay
-        finished = false;               //Wird auf false zurückgesetzt    
-        isHealingActive = false;        //Wird auf false zurückgesetzt    
+        //Die Heilanimation muss verschwinden
+        if (destroyIt != null)
+        {
+            Destroy(destroyIt);
+            yield return new WaitForSeconds(1.5f);     //künstlichen Delay
+            finished = false;               //Wird auf false zurückgesetzt    
+            isHealingActive = false;        //Wird auf false zurückgesetzt  
+        }
+        
+        
+
+  
     }
 }

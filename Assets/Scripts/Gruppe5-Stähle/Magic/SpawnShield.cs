@@ -19,9 +19,9 @@ public class SpawnShield : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.V) && !isShieldActivated && mana.CanThePlayerUseMane(manaPointsCost))
         {
-            mana.currentMana -= manaPointsCost;     //Kosten abziehen
+            shield.gameObject.SetActive(true);      //Schild animation wird aktiviert  
             isShieldActivated = true;               //Da schild Aktiviert ist wird es auf true gesetzt
-            shield.gameObject.SetActive(true);      //Schild animation wird aktiviert   
+            mana.currentMana -= manaPointsCost;     //Kosten abziehen                       
             StartCoroutine(ShielActivate());        //Courtine 
         }
     }
