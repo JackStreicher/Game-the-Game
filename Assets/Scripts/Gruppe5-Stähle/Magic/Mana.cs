@@ -6,46 +6,41 @@ public class Mana : MonoBehaviour
 {
     public int maxMana = 100;
     public int currentMana = 100;
-    public float timeToReloadManaPoints = 0.5f;
 
+    public bool isPassiveRegeneration = true;
 
+    public int passiveRegCounter = 0;
+    private int passiveRegTimeInFrames = 50;
+    float passiveRegAmount = 1f;
 
+  
 
-    private void Update()
+    private void FixedUpdate()
     {
-        //ReloadMana();
-        if (currentMana <= maxMana)
-        {
-            currentMana++;
-            //StartCoroutine(ReloadManaPoints());
-        }
+        PassiveRegeneration();    
     }
 
-
-    public void ReloadMana()
+    public void PassiveRegeneration()
     {
-        if (currentMana <= maxMana)
-        {
-            currentMana++;
-            //StartCoroutine(ReloadManaPoints());
+        if (isPassiveRegeneration) {
+         
+            if (passiveRegCounter < passiveRegTimeInFrames)
+            {
+                passiveRegCounter++;
+                
+            }
+            else
+            {
+                AddMana((int)passiveRegAmount);
+                passiveRegCounter = 0;
+            }
         }
-    }
-
-    public int GetCurrentMana()
-    {
-        return currentMana;
     }
 
     public void AddMana(int manaPoints)
-    {
-        if (maxMana > (manaPoints + currentMana))
-        {
+    {            
             currentMana += manaPoints;
-        }
-        else
-        {
-            currentMana = 100;
-        }
+            currentMana = Mathf.Clamp(currentMana, 0, maxMana);
     }
 
     public bool CanThePlayerUseMane(int manaPoints)
@@ -59,19 +54,5 @@ public class Mana : MonoBehaviour
         {           
             return true;
         }
-    }
-
-
-
-    IEnumerator ReloadManaPoints()
-    {
-        for (int i = currentMana; i < maxMana;i++)
-        {
-            i++;
-            yield return new WaitForSeconds(timeToReloadManaPoints);
-            currentMana = i;
-        }
-               
-        yield return new WaitForSeconds(0.1f);
     }
 }
