@@ -4,17 +4,16 @@ using UnityEngine;
 
 public class CubeActivateDoor : MonoBehaviour
 {
-    public GameObject cube;
+    //public string key;
 
     public GameObject door;
     private float timeUntilDes = 6;
     private float speed = 0.02f;
     private int up = 1000;
     bool isOpen = false;
-        //fickt euch einfach nur selbst 
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if(isOpen == true)
         {
@@ -22,12 +21,17 @@ public class CubeActivateDoor : MonoBehaviour
 
         }
     }
+
+   
+
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject == cube)
+        isOpen = false;
+        //Debug.Log(other.name.Contains(key) + " " + key);
+        if (other.name.Contains("key"))
         {
+            //Debug.Log("Hit");
             isOpen = true;
-            Debug.Log("Cube is in it");
         }
     }
     public IEnumerator desDoor()

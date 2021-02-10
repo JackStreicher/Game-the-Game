@@ -11,8 +11,6 @@ GameObject:
   - component: {fileID: 3157269454983709233}
   - component: {fileID: 2053364637196471700}
   - component: {fileID: 4295293901559904606}
-  - component: {fileID: 696182328}
-  - component: {fileID: 696182327}
   - component: {fileID: 696182326}
   m_Layer: 0
   m_Name: Doorframe
@@ -89,32 +87,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &696182328
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2349488655834192011}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 0.013709524, y: 0.04500002, z: 0.017465502}
-  m_Center: {x: 0.006854752, y: -0.000044570283, z: 0.0412673}
---- !u!65 &696182327
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2349488655834192011}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 0.013709524, y: 0.012736828, z: 0.032512035}
-  m_Center: {x: 0.006854752, y: -0.016176172, z: 0.016256033}
 --- !u!65 &696182326
 BoxCollider:
   m_ObjectHideFlags: 0
