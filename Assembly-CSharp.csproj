@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Materials\Terrain\MeshGradient.cs" />
+    <Compile Include="Assets\Prefabs\Orlag\OrlagAnimationController.cs" />
     <Compile Include="Assets\Scripts\Animation Scripts\AnimationController.cs" />
     <Compile Include="Assets\Scripts\Arrow.cs" />
     <Compile Include="Assets\Scripts\DialogManager.cs" />
@@ -80,6 +81,7 @@
     <Compile Include="Assets\Scripts\Movement\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\NPCConversation.cs" />
     <Compile Include="Assets\Scripts\NPCStats.cs" />
+    <Compile Include="Assets\Scripts\NPCWeapon.cs" />
     <Compile Include="Assets\Scripts\PlayerInteraction.cs" />
     <Compile Include="Assets\Scripts\QuestLogUIText.cs" />
     <Compile Include="Assets\Scripts\QuestOnButton.cs" />
@@ -102,6 +104,7 @@
     <Compile Include="Assets\Scripts\Statics\Remover.cs" />
     <Compile Include="Assets\Scripts\UIControler.cs" />
     <Compile Include="Assets\Scripts\UpdateUIQuestList.cs" />
+    <Compile Include="Assets\Scripts\WeaponStats.cs" />
     <Compile Include="Assets\VLights\Scripts\Demo\MouseOrbitDemo.cs" />
     <Compile Include="Assets\VLights\Scripts\PostProcess\VLightInterleavedSampling.cs" />
     <Compile Include="Assets\VLights\Scripts\Util\GenerateNoiseTexture.cs" />
