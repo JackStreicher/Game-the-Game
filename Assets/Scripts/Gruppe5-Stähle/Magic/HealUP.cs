@@ -26,8 +26,7 @@ public class HealUP : MonoBehaviour
     GameObject healingPrefab;
 
     private void Start()
-    {
-        
+    {        
         healing = healingList[0];
         healingPrefab = healing;
         maxHealth = player.GetComponent<Stats>().baseHitpoints;
