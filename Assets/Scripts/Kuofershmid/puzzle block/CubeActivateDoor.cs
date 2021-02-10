@@ -38,6 +38,8 @@ public class CubeActivateDoor : MonoBehaviour
             i++;
         }
         yield return new WaitForSeconds(timeUntilDes);
+
         isOpen = false;
+        door.SetActive(false);
     }
 }
