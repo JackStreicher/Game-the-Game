@@ -8,7 +8,9 @@ public class FireBallMove : MonoBehaviour
     public float speedOfFireMode;
     public GameObject firepoint;
     public int fireBallDamage;
-    private Enemy enemy;
+    private GameObject enemy;
+
+    private Stats playerStats;
 
 
     public void Start()
@@ -33,10 +35,7 @@ public class FireBallMove : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-     //   if (collision.transform.tag == "Enemy")
-     //   {
-     //       enemy.TakeDamage(fireBallDamage);
-     //   }
+
 
         speedOfTheFB = 0;               //wenn die Collision passiert ist, dann fliegt der Feuerball nicht mehr bzw steht und ...
         Destroy(gameObject);            //... wird dann schließlich zerstört
@@ -48,6 +47,12 @@ public class FireBallMove : MonoBehaviour
             {
                 Destroy(collision.gameObject); // Zerstört den Stein der den Weg zum letzten Artefakt versperrt
             }
+        }
+
+        if (collision.transform.tag == "Enemy")
+        {
+            Debug.Log("collision mit enemy");
+            collision.gameObject.GetComponent<NPCStats>().SufferDamage(fireBallDamage, playerStats);                      
         }
 
 

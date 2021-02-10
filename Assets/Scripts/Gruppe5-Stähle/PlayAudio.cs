@@ -7,7 +7,9 @@ public class PlayAudio : MonoBehaviour
     public AudioClip clip1;
     public AudioClip clip2;
     public AudioClip clip3;
+
     private AudioSource AudioManager;
+
     private bool played1;
     private bool played2;
     private bool played3;
@@ -15,7 +17,7 @@ public class PlayAudio : MonoBehaviour
     private void Start()
     {
         AudioManager = GetComponent<AudioSource>();
-        AudioManager.volume = 1f;
+        AudioManager.volume = 0.5f;
     }
     void Update()
     {

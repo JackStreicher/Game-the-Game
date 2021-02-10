@@ -99,18 +99,9 @@ public class Enemy : MonoBehaviour
         agent.SetDestination(transform.position);   //Schaut das der Gegner sich nicht bewegt
         transform.LookAt(player);                   //Der Enemy soll den Spieler anschauen
 
-        Debug.Log(Vector3.Distance(agent.transform.position, player.position));
         if(Vector3.Distance(agent.transform.position , player.position) <= 20 )
         {
-            Debug.Log("DISTANCE OK");
-
-          //  if(timer == 1)
-          //  {
-
-                GiveDamage();
-                
-          //  }
-            
+            GiveDamage();                          
         }
     }
 
@@ -122,27 +113,9 @@ public class Enemy : MonoBehaviour
         gameObject.GetComponent<NPCStats>().SufferDamage(damage, playerStats); 
     }
 
-
-
-
-    //Der Enemy gibt dem Spieler Schaden
-  // private void OnTriggerEnter(Collider other)
-  // {
-  //     Debug.Log("COLLIDES");
-  //     //Debug.Log("ONTRIGGER");
-  //     if (other.gameObject.transform == player)
-  //     {
-  //         Debug.Log("COLLIDES WITH PLAYER");
-  //         if (timer == 0)
-  //         {
-  //             GiveDamage();   //Gibt dem Spieler schaden
-  //             Debug.Log("GIVEDAMAGE");
-  //         }
-  //     }          
-  // }
-
     public void GiveDamage()
     {
-        GameObject.Find("Player").GetComponent<Stats>().currentHitpoints -= damgeOfEnemy;   //schaut wie viel Leben der Spieler gerade hat
+        //Der Soieler bekommt schaden
+        GameObject.Find("Player").GetComponent<Stats>().currentHitpoints -= damgeOfEnemy;   
     }
 }
