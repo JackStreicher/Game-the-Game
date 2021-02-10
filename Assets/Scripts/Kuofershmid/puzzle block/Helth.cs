@@ -4,18 +4,16 @@ using UnityEngine;
 
 public class Helth : MonoBehaviour
 {
-    public string gOname;
+    public string playerWeponName;
     [Header("Helth and damage Vars")]
     public int health;
     public int damage;
     
     //if player then true
     public bool isPlayer;
-    public bool isHit;
+    bool isHit;
 
-    [Header("If player")]
-    public string playerFalseName;
-
+    
     private void Start()
     {
         Debug.Log(health);
@@ -41,7 +39,7 @@ public class Helth : MonoBehaviour
     private void OnCollisionEnter(Collision col)
     {
         //collison with the attack of the player
-        if (col.gameObject.name.Contains(gOname))
+        if (col.gameObject.name.Contains(playerWeponName))
         {
             Debug.Log("Hit");
             isHit = true;
@@ -79,13 +77,9 @@ public class Helth : MonoBehaviour
 
         if(health <= 0)
         {
-            if (gameObject.name.Contains(playerFalseName))
-            {
-                 GameObject pl  = GameObject.FindWithTag("move");
+            GameObject pl = GameObject.FindWithTag("move");
 
-                pl.SetActive(false);
-                
-            }
+            pl.SetActive(false);
         }
 
         //test 
