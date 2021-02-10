@@ -22,4 +22,4 @@ MonoBehaviour:
   goldReward: 0
   childQuests: []
   experienceReward: 0
-  isQuestAccepted: 1
+  isQuestAccepted: 0

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e43a41fc00947a846819cfbb4cac3913, type: 3}
+  m_Name: PeterDiag
+  m_EditorClassIdentifier: 
+  npcName: Peter
+  dialogLines:
+  - "G\u2019day!"
+  - I have scattered 6 Chests across this desert
+  - Can you find them all?
+  - If you manage to, I will reward you
+  awaitingQuestCompletion: No reward yet, you haven't found them all
+  questDone: There is no way you found them all. You must be cheating
+  quest: {fileID: 11400000, guid: 2446438ddf6929e45820e29be0064f1b, type: 2}

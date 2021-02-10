@@ -24,4 +24,4 @@ MonoBehaviour:
   goldReward: 30
   childQuests: []
   experienceReward: 450
-  isQuestAccepted: 1
+  isQuestAccepted: 0
