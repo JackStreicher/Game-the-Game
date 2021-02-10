@@ -10,16 +10,28 @@ public class SpawnShield : MonoBehaviour
     private bool isShieldActivated = false;
     public int manaPointsCost = 25;        //Wie viel Manpunkte das Schild kostet
 
+    //audio 
+    public AudioClip soundShield;
+    private AudioSource AudioManager;
+    public float volumeValue = 0.1f;        //Um die Lautstärke zu regeln
+
+
+
     private void Start()
     {
         shield.gameObject.SetActive(false);   //schild animaiton wird von Anfang an deaktiviert um Probleme zu vermeiden
+
+        //Audio
+        AudioManager = GetComponent<AudioSource>();
+        AudioManager.volume = volumeValue;      //CLautstärke regeln
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.V) && !isShieldActivated && mana.CanThePlayerUseMane(manaPointsCost)&& !GameObject.Find("ArtefaktSchild"))
+        if (Input.GetKeyDown(KeyCode.V) && !isShieldActivated && mana.CanThePlayerUseMane(manaPointsCost) && !GameObject.Find("ArtefaktSchild"))
         {
             shield.gameObject.SetActive(true);      //Schild animation wird aktiviert  
+            AudioManager.PlayOneShot(soundShield);  //Audio wird gespielt
             isShieldActivated = true;               //Da schild Aktiviert ist wird es auf true gesetzt
             mana.currentMana -= manaPointsCost;     //Kosten abziehen                       
             StartCoroutine(ShielActivate());        //Courtine 

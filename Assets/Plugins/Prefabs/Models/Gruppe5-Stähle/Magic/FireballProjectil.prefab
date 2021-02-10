@@ -9667,7 +9667,7 @@ GameObject:
   - component: {fileID: 1290938026128077274}
   - component: {fileID: 4754406965719313699}
   m_Layer: 0
-  m_Name: Projectile
+  m_Name: FireballProjectil
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9704,6 +9704,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedOfTheFB: 15
   speedOfFireMode: 5
+  firepoint: {fileID: 0}
+  fireBallDamage: 50
 --- !u!135 &1290938026128077274
 SphereCollider:
   m_ObjectHideFlags: 0
