@@ -6,11 +6,11 @@ using UnityEngine;
 public class Goal : ScriptableObject
 {
 
-  
+
     public enum GoalType
     {
         Collect,
-        Kill,        
+        Kill,
         Find,
         Craft
     }
@@ -22,12 +22,18 @@ public class Goal : ScriptableObject
     public GameObject goal;
     public Vector3 coordinate;
 
-    private GameObject findGoal;
+    public GameObject findGoal;
     private bool spawnedTarget = false;
 
+
+    private void Start()
+    {
+        OnValidate();
+
+    }
     public void OnValidate()
     {
-        if(goalType == GoalType.Find && !spawnedTarget)
+        if (goalType == GoalType.Find && !spawnedTarget)
         {
             Instantiate(findGoal, coordinate, Quaternion.identity);
             spawnedTarget = false;
@@ -36,20 +42,20 @@ public class Goal : ScriptableObject
     public virtual void QuestAddProgress(int amount)
     {
 
-            countCurrent += amount;
+        countCurrent += amount;
 
-            countCurrent = Mathf.Clamp(countCurrent, 0, countRequired);
+        countCurrent = Mathf.Clamp(countCurrent, 0, countRequired);
 
-            if (!completed)
+        if (!completed)
+        {
+            if (countCurrent >= countRequired)
             {
-                if (countCurrent >= countRequired)
-                {
-                    completed = true;
-                    
-                }
+                completed = true;
 
             }
-        
+
+        }
+
     }
 
     public void ResetGoal()
