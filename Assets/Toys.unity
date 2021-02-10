@@ -396,8 +396,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
-  SerachTime: 0
-  speed: 0
+  SerachTime: 10
+  speed: 1
 --- !u!195 &433606029
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -775,7 +775,7 @@ PrefabInstance:
     - target: {fileID: 2669846618203038691, guid: ffa98bd7a85042941ac3201d487a6f48,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2669846618203038691, guid: ffa98bd7a85042941ac3201d487a6f48,
         type: 3}
@@ -837,6 +837,21 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2669846619718849899, guid: ffa98bd7a85042941ac3201d487a6f48,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2669846619718849899, guid: ffa98bd7a85042941ac3201d487a6f48,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2669846619718849899, guid: ffa98bd7a85042941ac3201d487a6f48,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5316416869818821199, guid: ffa98bd7a85042941ac3201d487a6f48,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -855,6 +870,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Stabbing
+      objectReference: {fileID: 0}
+    - target: {fileID: 5350190513529438571, guid: e35263fde9e02d349965d6526b3f2836,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 112
       objectReference: {fileID: 0}
     - target: {fileID: 5599391133728557349, guid: e35263fde9e02d349965d6526b3f2836,
         type: 3}
