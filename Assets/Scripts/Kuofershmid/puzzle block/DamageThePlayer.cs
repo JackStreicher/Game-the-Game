@@ -5,13 +5,14 @@ using UnityEngine;
 public class DamageThePlayer : MonoBehaviour
 {
     public int damageThePl;
+
     //is the damage that is addet in Helth
     public static int plDamageCalc;
    
     //tag from the hit obj
     public string tagName;
-    bool isDamaged = false;
-    
+
+    bool isDamaged = false;    
     public static bool plDamage = false;
 
     public void Start()
@@ -31,7 +32,4 @@ public class DamageThePlayer : MonoBehaviour
             plDamage = isDamaged;
         }
     }
-
-
-
 }

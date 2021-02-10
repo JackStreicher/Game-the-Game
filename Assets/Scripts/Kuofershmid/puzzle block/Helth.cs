@@ -16,7 +16,7 @@ public class Helth : MonoBehaviour
     
     private void Start()
     {
-        Debug.Log(health);
+        //Debug.Log(health);
     }
 
     // Update is called once per frame
