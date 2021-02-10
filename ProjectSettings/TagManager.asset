@@ -10,6 +10,7 @@ TagManager:
   - Enemy
   - Neutral
   - CantMove
+  - move
   layers:
   - Default
   - TransparentFX
