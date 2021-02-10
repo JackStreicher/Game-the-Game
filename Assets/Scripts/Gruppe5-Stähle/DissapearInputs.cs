@@ -7,7 +7,7 @@ public class DissapearInputs : MonoBehaviour
 {
     public GameObject leftPanel;
 
-    void Update()
+    void Update() // Zeigt den Text an oder nicht an, je nachdem ob der Questlog angezeigt wird
     {
         if (leftPanel.activeSelf)
         {
