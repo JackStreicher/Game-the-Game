@@ -20,8 +20,8 @@ public class SpawnFireBall : MonoBehaviour
 
     void Update()
     {
-        //Wenn der Spieler Q drückt und der Timer größer ist als amount von timeToFire dann kann der Spieler einen Feuerball schießen und es muss Genügend Mana vorhanden sein
-        if (Input.GetKeyDown(KeyCode.Q) && Time.time >= timeToFire && mana.CanThePlayerUseMane(manaPointsCost)) 
+        //Wenn der Spieler Q drückt und der Timer größer ist als amount von timeToFire dann kann der Spieler einen Feuerball schießen und es muss Genügend Mana vorhanden sein und das Artefackt musste aufgenommen werden
+        if (Input.GetKeyDown(KeyCode.Q) && Time.time >= timeToFire && mana.CanThePlayerUseMane(manaPointsCost) && !GameObject.Find("FeuerArtefakt")) 
         {
             mana.currentMana -= manaPointsCost; //Kosten abziehen
             timeToFire = Time.time + 1 / effectToSpawn.GetComponent<FireBallMove>().speedOfFireMode;

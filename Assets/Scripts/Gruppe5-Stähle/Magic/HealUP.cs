@@ -42,8 +42,8 @@ public class HealUP : MonoBehaviour
         //Wenn die Heilung nicht aktiviert wurde...
         if (!isHealingActive)
         {
-            //... kann man zum Heilen E drücken, aber nur so lange man Mana hat
-            if (Input.GetKeyDown(KeyCode.E) && mana.CanThePlayerUseMane(manaPointsCost))
+            //... kann man zum Heilen E drücken, aber nur so lange man Mana hat und man muss das artefackt aufgenommen haben
+            if (Input.GetKeyDown(KeyCode.E) && mana.CanThePlayerUseMane(manaPointsCost) && !GameObject.Find("HeilungsArtefakt"))
             {
                 mana.currentMana -= manaPointsCost; //Kosten abziehen
                 HealingUP();               
@@ -51,7 +51,6 @@ public class HealUP : MonoBehaviour
         }
         else //Oder wenn man die Heilung aktiviert hat kann man sich nicht im gleichen moment heilen
         {                     
-            Debug.Log("Your already heal yourself");
             postionOfHealingAnimation();    //Aktualisiert welche Positon die Animation stattfinden soll
         }
     }

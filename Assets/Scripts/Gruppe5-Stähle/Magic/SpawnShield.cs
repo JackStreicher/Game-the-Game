@@ -17,7 +17,7 @@ public class SpawnShield : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.V) && !isShieldActivated && mana.CanThePlayerUseMane(manaPointsCost))
+        if (Input.GetKeyDown(KeyCode.V) && !isShieldActivated && mana.CanThePlayerUseMane(manaPointsCost)&& !GameObject.Find("ArtefaktSchild"))
         {
             shield.gameObject.SetActive(true);      //Schild animation wird aktiviert  
             isShieldActivated = true;               //Da schild Aktiviert ist wird es auf true gesetzt
