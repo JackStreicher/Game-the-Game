@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.AI;
+using Debug = UnityEngine.Debug;
 using Random = System.Random;
 
 public class MonsterAI : MonoBehaviour
@@ -48,10 +49,13 @@ public class MonsterAI : MonoBehaviour
             }
             
         }
-        else
-        {
-            mState = MonsterState.SearchingLostPlayer;
-        }
+
+        Debug.Log("-------------------");
+        Debug.Log("MonsterAI is " + mState);
+        Debug.Log("Target is: " + agent.destination);
+        Debug.Log("Player is at: " + player.transform.position);
+        Debug.Log("Idle position is at: " + idlePosition);
+        Debug.Log("-------------------\n");
         
         switch(mState)
         {
@@ -61,12 +65,15 @@ public class MonsterAI : MonoBehaviour
             case MonsterState.Attacking:
                 StartAttacking();
                 break;
+            case MonsterState.SearchingLostPlayer:
+                SearchLostPlayer();
+                break;
         }
     }
     
     private void StopWalking()
     {
-        agent.SetDestination(transform.position);
+        agent.destination = transform.position;
     }
 
     private void Idle()
@@ -83,30 +90,31 @@ public class MonsterAI : MonoBehaviour
 
     private void ReturnToIdlePos()
     {
-        agent.SetDestination(idlePosition);
+        agent.destination = idlePosition;
+        if (agent.isStopped) mState = MonsterState.Idle;
     }
     
     private void SearchLostPlayer()
     {
         Random rand = new Random();
-        agent.SetDestination(transform.position + new Vector3(rand.Next(0, 15), rand.Next(0, 15), rand.Next(0, 15)));
+        agent.destination = transform.position + new Vector3(rand.Next(-15, 15), rand.Next(-15, 15), rand.Next(-15, 15));
     }
     
     private void SelectTarget()
     {
-        agent.SetDestination(player.transform.position);
+        agent.destination = player.transform.position;
     }
     
     public void SetPlayerVisible(bool isVisible)
     {
         isInSight = isVisible;
-        if (isVisible)
+        if (!isVisible)
         {
             mState = MonsterState.SearchingLostPlayer;
             StartCoroutine(SearchPlayer());
         }
     }
-
+    
     public IEnumerator SearchPlayer()
     {
         yield return new WaitForSeconds(SerachTime);
