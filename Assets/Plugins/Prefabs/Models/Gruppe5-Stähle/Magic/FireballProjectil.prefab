@@ -9705,7 +9705,7 @@ MonoBehaviour:
   speedOfTheFB: 15
   speedOfFireMode: 5
   firepoint: {fileID: 0}
-  fireBallDamage: 50
+  fireBallDamage: 500
 --- !u!135 &1290938026128077274
 SphereCollider:
   m_ObjectHideFlags: 0

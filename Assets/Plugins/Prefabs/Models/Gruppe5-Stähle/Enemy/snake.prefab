@@ -376,8 +376,8 @@ MonoBehaviour:
   anim: {fileID: 1168260136173094823}
   npcTag: 1
   npcName: Schnek
-  baseHitpoints: 100
-  hitpoints: 100
+  baseHitpoints: 1000
+  hitpoints: 1000
   level: 3
   difficulty: 2
 --- !u!114 &2979007547536771737
@@ -404,8 +404,8 @@ MonoBehaviour:
   walkpointRange: 30
   timeBetweenAttacks: 100
   damgeOfEnemy: 10
-  damageTimer: 100
-  sightRange: 100
+  damageTimer: 1000
+  sightRange: 1000
   attackRange: 10
 --- !u!195 &4145823409340350312
 NavMeshAgent:
