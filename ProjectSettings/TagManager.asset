@@ -9,6 +9,7 @@ TagManager:
   - Friendly
   - Enemy
   - Neutral
+  - Weapon
   layers:
   - Default
   - TransparentFX
