@@ -19,9 +19,8 @@ public class MartinMove : MonoBehaviour
     {
         for (int i = 0; i < ql.GetQuestList().Count + 1; i++)
         {
-            if (ql.GetQuestList()[i].title.Contains("Move Move Move!!!"))
+            if (ql.GetQuestList()[i].title.Contains("Move Move Move!!!")) //Durchsucht die Questliste nach einer Quest mit dem bestimmten Titel
             {
-                Debug.Log("aaaa");
                 questRunning = true;
                 break;
             }

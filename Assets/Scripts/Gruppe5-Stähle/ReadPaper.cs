@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ReadPaper : NPCConversation
+public class ReadPaper : NPCConversation //erbt von NPCConversation
 {
     public GameObject player;
     void Update()
@@ -21,7 +21,7 @@ public class ReadPaper : NPCConversation
         {
             if (Input.GetKey(KeyCode.R))
             {
-                dialogManager.StartDialog(diag);
+                dialogManager.StartDialog(diag); // Wenn der Spieler nah genug an dem Blatt Papier ist und R drückt öffnet wird der Dialog gestartet
             }
         }
     }
