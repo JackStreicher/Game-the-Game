@@ -10,6 +10,9 @@ TagManager:
   - Enemy
   - Neutral
   - Healing
+  - PyramidDoor
+  - Stone
+  - SecretPathway
   layers:
   - Default
   - TransparentFX

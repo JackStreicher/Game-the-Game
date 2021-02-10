@@ -33,5 +33,13 @@ public class FireBallMove : MonoBehaviour
     {
         speedOfTheFB = 0;               //wenn die Collision passiert ist, dann fliegt der Feuerball nicht mehr bzw steht und ...
         Destroy(gameObject);            //... wird dann schließlich zerstört
+        if(collision.transform.tag == "SecretPathway")
+        {
+            if (!GameObject.Find("HeilungsArtefakt"))
+            {
+                Destroy(collision.gameObject); // Zerstört den Stein der den Weg zum letzten Artefakt versperrt
+            }
+
+        }
     }
 }

@@ -14,10 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcName: Martin
   dialogLines:
-  - Wait, who are you?
-  - Did you just come out of that cave?
+  - Greetings
+  - Wait... Who are you? Did you just come out of that cave?
   - Out of the Portal?
   - By the gods, we have lost enough time already...
-  - Follow me
-  awaitingQuestCompletion: 
-  quest: {fileID: 0}
+  - You need to get to the village as soon as possible. You should be able to see
+    it once you leave the canyon.
+  awaitingQuestCompletion: What are you waiting for?
+  questDone: 
+  quest: {fileID: 11400000, guid: a77678da6a195554aaba9f9ed7e32e66, type: 2}

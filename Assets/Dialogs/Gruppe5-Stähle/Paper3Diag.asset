@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e43a41fc00947a846819cfbb4cac3913, type: 3}
+  m_Name: Paper3Diag
+  m_EditorClassIdentifier: 
+  npcName: 
+  dialogLines:
+  - You did a great job... I knew you could find them all, that is with my help of
+    course... We will meet sooner or later. From a friend
+  awaitingQuestCompletion: 
+  questDone: 
+  quest: {fileID: 0}
