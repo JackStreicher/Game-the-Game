@@ -1,21 +1,41 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using UnityEditor.SceneManagement;
 using UnityEngine;
-using UnityEngine.Rendering;
+using UnityEngine.AI;
 
 public class MonsterAI : MonoBehaviour
 {
-    private GameObject Player;
-
+    private GameObject player;
+    public NavMeshAgent agent;
+    private Collider vision;
     public void Start()
     {
-        Player = GameObject.FindWithTag("Player");
+        player = GameObject.FindWithTag("Player");
+        agent = GetComponent<NavMeshAgent>();
+        vision = GameObject.FindWithTag("VisionCone").
     }
     
     public void FixedUpdate()
     {
-        Debug.Log("Player is at " + Player.transform.position);
-        transform.position = Player.transform.position;
+        IsPlayerVisible();
+    }
+
+    public void SelectTarget()
+    {
+        
+    }
+
+    public bool IsPlayerVisible()
+    {
+
+        
+        if ()
+        {
+            Debug.Log("I can See you\n-The enemy");
+        }
+        else
+        {
+            Debug.Log("Cant see player");
+        }
+        return false;
     }
 }
