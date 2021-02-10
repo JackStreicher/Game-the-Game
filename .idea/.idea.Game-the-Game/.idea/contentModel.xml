@@ -51,6 +51,8 @@
             <e p="puzzle block" t="Include">
               <e p="BaseAi.cs" t="Include" />
               <e p="CubeActivateDoor.cs" t="Include" />
+              <e p="DamageThePlayer.cs" t="Include" />
+              <e p="Helth.cs" t="Include" />
               <e p="MoveBlock.cs" t="Include" />
               <e p="StopBlock.cs" t="Include" />
             </e>

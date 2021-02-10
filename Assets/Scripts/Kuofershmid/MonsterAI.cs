@@ -13,7 +13,7 @@ public class MonsterAI : MonoBehaviour
         Player = GameObject.FindWithTag("Player");
     }
     
-    public void Update()
+    public void FixedUpdate()
     {
         Debug.Log("Player is at " + Player.transform.position);
         transform.position = Player.transform.position;
