@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: GlobalQuestList
   m_EditorClassIdentifier: 
   globalQuestList:
-  - {fileID: 11400000, guid: ae16b28a8e9abf14c9a75d057bfa668c, type: 2}
-  - {fileID: 11400000, guid: 92734289f99e8fd4cabdb0610cfda5fd, type: 2}
-  - {fileID: 11400000, guid: f6a4ef3774582c141b4acd105d49b823, type: 2}
-  - {fileID: 11400000, guid: 3968a2f70f3de1d47915f09f6e74b9cf, type: 2}
+  - {fileID: 11400000, guid: cf5ac7c7573621d4e946597c2c7bc0db, type: 2}
+  - {fileID: 11400000, guid: 22caef9185aab4a408237d5527339cb5, type: 2}
+  - {fileID: 11400000, guid: 581dfb3e28ea1674f8493e51fb34f9df, type: 2}
+  - {fileID: 11400000, guid: 51d4778618bdfae4c9936b1b170e43e5, type: 2}
