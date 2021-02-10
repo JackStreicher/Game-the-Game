@@ -48,6 +48,7 @@
           <e p="ItemStats.cs" t="Include" />
           <e p="Kuofershmid" t="Include">
             <e p="MonsterAI.cs" t="Include" />
+            <e p="VisionCone.cs" t="Include" />
             <e p="puzzle block" t="Include">
               <e p="BaseAi.cs" t="Include" />
               <e p="CubeActivateDoor.cs" t="Include" />

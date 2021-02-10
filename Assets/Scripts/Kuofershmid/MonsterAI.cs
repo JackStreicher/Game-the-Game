@@ -1,56 +1,117 @@
 ﻿using System;
-using UnityEditor.SceneManagement;
+using System.Collections;
+using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.AI;
+using Random = System.Random;
 
 public class MonsterAI : MonoBehaviour
 {
-    private GameObject player;
-    public NavMeshAgent agent;
-    private Collider vision;
-    private bool isInSight;
+    public Animator animator;
+    public int SerachTime;
+    private Vector3 idlePosition;
+    public float speed;
     
-    public void Start()
+    enum MonsterState
+    {
+        Idle, Approaching, Attacking, SearchingLostPlayer, ReturningToIdlePosition
+    }
+    
+    private GameObject player;
+    private NavMeshAgent agent;
+    private bool isInSight;
+    private MonsterState mState = MonsterState.Idle;
+
+    private void Start()
     {
         player = GameObject.FindWithTag("Player");
         agent = GetComponent<NavMeshAgent>();
-        vision = GameObject.FindWithTag("VisionCone").gameObject.GetComponent<MeshCollider>();
+        idlePosition = transform.position;
     }
     
-    public void FixedUpdate()
+    private void FixedUpdate()
     {
-        if (IsPlayerVisible())
+        if (isInSight)
         {
-            SelectTarget();
-        }
-    }
-    
-    public void SelectTarget()
-    {
-        agent.SetDestination(player.transform.position);
-    }
-
-    public bool IsPlayerVisible()
-    {
-        if(isInSight)
-        {
-            //Debug.Log("I can See you\n-The enemy");
-            return true;
+            if (agent.hasPath)
+            {
+                if (Vector3.Distance(transform.position, player.transform.position) >= 1)
+                {
+                    mState = MonsterState.Attacking;
+                }
+            }
+            else
+            {
+                mState = MonsterState.Approaching;
+                SelectTarget();
+            }
+            
         }
         else
         {
-            //Debug.Log("Cant see player");
-            return false;
+            mState = MonsterState.SearchingLostPlayer;
+        }
+        
+        switch(mState)
+        {
+            case MonsterState.Idle:
+                Idle();
+                break;
+            case MonsterState.Attacking:
+                StartAttacking();
+                break;
+        }
+    }
+    
+    private void StopWalking()
+    {
+        agent.SetDestination(transform.position);
+    }
+
+    private void Idle()
+    {
+        Random rand = new Random();
+        Quaternion rot = Quaternion.Euler(Mathf.Deg2Rad * rand.Next(0, 360), Mathf.Deg2Rad * rand.Next(0, 360), Mathf.Deg2Rad * rand.Next(0, 360));
+        transform.rotation = Quaternion.Slerp(transform.rotation, rot, speed * Time.deltaTime);
+    }
+    
+    private void StartAttacking()
+    {
+        
+    }
+
+    private void ReturnToIdlePos()
+    {
+        agent.SetDestination(idlePosition);
+    }
+    
+    private void SearchLostPlayer()
+    {
+        Random rand = new Random();
+        agent.SetDestination(transform.position + new Vector3(rand.Next(0, 15), rand.Next(0, 15), rand.Next(0, 15)));
+    }
+    
+    private void SelectTarget()
+    {
+        agent.SetDestination(player.transform.position);
+    }
+    
+    public void SetPlayerVisible(bool isVisible)
+    {
+        isInSight = isVisible;
+        if (isVisible)
+        {
+            mState = MonsterState.SearchingLostPlayer;
+            StartCoroutine(SearchPlayer());
         }
     }
 
-    public void OnTriggerEnter(Collider col)
+    public IEnumerator SearchPlayer()
     {
-        if (col.transform.CompareTag("Player")) isInSight = true;
+        yield return new WaitForSeconds(SerachTime);
+        ReturnToIdlePos();
+        mState = MonsterState.ReturningToIdlePosition;
     }
-
-    public void OnTriggerExit(Collider col)
-    {
-        if (col.transform.CompareTag("Player")) isInSight = false;
-    }
+    
 }
