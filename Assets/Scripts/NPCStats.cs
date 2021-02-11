@@ -62,7 +62,7 @@ public class NPCStats : MonoBehaviour
                     transform.GetComponent<ItemDrop>().DropItems();
                 }
 
-                if (player != null)
+                if (player != null && !isDead)
                 {
                     Debug.Log("Grant XP " + GrantXP());
                     player.AddExperience(GrantXP());
@@ -70,7 +70,7 @@ public class NPCStats : MonoBehaviour
                     Death();
                 }
                 //Has to die even if there is no Player script given
-                else
+                else if (!isDead)
                 {
                     
                     Death();
@@ -87,7 +87,22 @@ public class NPCStats : MonoBehaviour
         //Play death animation
         //StartCoroutine(Remover.DelayAndRemove(this.transform.gameobject, 200))
         isDead = true;
-        Remover.CheckAndRemove(this.transform.gameObject);
+        //Remover.CheckAndRemove(this.transform.gameObject);
+        StartCoroutine(Remover.DelayAndRemove(this.transform.gameObject, 15000));
+        var npcAnimator = transform.GetComponent<Animator>();
+        if (npcAnimator != null)
+        {
+            npcAnimator.SetBool("Dead", true);
+        }
+
+        var characterController = GetComponent<CharacterController>();
+        if (characterController != null)
+        {
+            characterController.radius = 0.0001f;
+            characterController.height = 0.0001f;
+            characterController.skinWidth = 0.0001f;
+        }
+
     }
 
 

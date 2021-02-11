@@ -9,6 +9,7 @@ TagManager:
   - Friendly
   - Enemy
   - Neutral
+  - Weapon
   layers:
   - Default
   - TransparentFX
@@ -22,7 +23,7 @@ TagManager:
   - QuestItem
   - Enemy
   - Projectile
-  - 
+  - vlight
   - 
   - 
   - 
