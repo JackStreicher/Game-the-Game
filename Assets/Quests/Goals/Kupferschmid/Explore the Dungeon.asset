@@ -16,7 +16,7 @@ MonoBehaviour:
   countRequired: 0
   countCurrent: 0
   completed: 0
-  goal: {fileID: 0}
+  goal: {fileID: 8489015361887507834, guid: 3b15cd132489ba658ae9fc98e63b7525, type: 3}
   coordinate: {x: -73.2, y: -9.3, z: 60.3}
   findGoal: {fileID: 5763722167204874401, guid: 56c957ae51960be4ca5c0d85c6c272eb,
     type: 3}
