@@ -2,21 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df8044d8-6771-45fd-a3fd-f356228b3a9d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Kuofershmid/VisionCone.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Kuofershmid/VisionCone.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game-the-Game/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game-the-Game/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Game-the-Game/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game-the-Game/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game-the-Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game-the-Game/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor-firstpass.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor-firstpass.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Kuofershmid/MonsterAI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Kuofershmid/MonsterAI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Toys.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Toys.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game-the-Game.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Game-the-Game.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Quests/Kopperboi.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Kuofershmid/PortalBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Kuofershmid/PortalBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp-Editor-firstpass.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp-Editor-firstpass.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/UnityEditor.UI.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/UnityEditor.UI.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/UnityEngine.UI.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/UnityEngine.UI.csprojAssemblyReference.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +28,7 @@
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/Kuofershmid/VisionCone.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Kuofershmid/MonsterAI.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Kuofershmid/PortalBehaviour.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1oBixqUE5XH7wV40IrENaRHrHpS" />
@@ -86,6 +82,7 @@
       <workItem from="1612959546404" duration="4077000" />
       <workItem from="1612965293828" duration="2567000" />
       <workItem from="1612987291269" duration="3296000" />
+      <workItem from="1613035402707" duration="460000" />
     </task>
     <servers />
   </component>

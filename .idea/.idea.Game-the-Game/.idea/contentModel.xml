@@ -35,6 +35,10 @@
             <e p="InteractableItemGenerator.cs" t="Include" />
             <e p="QuestGenerator.cs" t="Include" />
           </e>
+          <e p="Enemy path" t="Include">
+            <e p="AtackRay.cs" t="Include" />
+            <e p="EnemyScript.cs" t="Include" />
+          </e>
           <e p="EquipmentManager.cs" t="Include" />
           <e p="EquipmentSlot.cs" t="Include" />
           <e p="EquipmentUISlot.cs" t="Include" />
@@ -47,7 +51,9 @@
           <e p="ItemDrop.cs" t="Include" />
           <e p="ItemStats.cs" t="Include" />
           <e p="Kuofershmid" t="Include">
+            <e p="CheckPlayerDistance.cs" t="Include" />
             <e p="MonsterAI.cs" t="Include" />
+            <e p="PortalBehaviour.cs" t="Include" />
             <e p="VisionCone.cs" t="Include" />
             <e p="puzzle block" t="Include">
               <e p="BaseAi.cs" t="Include" />

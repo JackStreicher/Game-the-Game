@@ -4,30 +4,15 @@ using UnityEngine;
 
 public class PortalBehaviour : MonoBehaviour
 {
-    public GameObject loadingScreenUi;
-    public BoxCollider triggerPoint;
-    public Scene theCrossingScene;
-
+    private string[] scenes = {"The Crossing", "Dungeon"};
+    
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Do smth");
-        ChangeScene();
+        ChangeScene(SceneManager.GetActiveScene().name == "Dungeon" ? scenes[0] : scenes[1]);
     }
 
-    private void ChangeScene(int _sceneIndex)
+    private void ChangeScene(string SceneName)
     {
-        Debug.Log("he might do smth");
-        if (!loadingScreenUi.activeSelf)
-            loadingScreenUi.SetActive(true);
-
-        StartCoroutine(LoadAsync());
-    }
-
-    IEnumerator LoadAsync()
-    {
-        Debug.Log("he is doing smth");
-        AsyncOperation operation = SceneManager.LoadSceneAsync(//SCENE);
-
-        yield return 0;
+        SceneManager.LoadScene(SceneName);
     }
 }
