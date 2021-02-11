@@ -105,7 +105,7 @@ public class MonsterAI : MonoBehaviour
         bool reachedTarget = false;
         while (!reachedTarget)
         {
-            transform.position += (new Vector3(transform.position.x, transform.position.y, transform.position.z) + pos).normalized;
+            transform.position -= (new Vector3(transform.position.x, transform.position.y, transform.position.z) - pos).normalized;
             yield return new WaitForFixedUpdate();
             if (Vector3.Distance(transform.position, pos) <= 5)
             {
