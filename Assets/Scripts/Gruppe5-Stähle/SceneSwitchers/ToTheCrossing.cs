@@ -7,6 +7,6 @@ public class ToTheCrossing : MonoBehaviour
 {
     void OnTriggerEnter(Collider other)
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene("The Crossing");
     }
 }
