@@ -13,9 +13,18 @@ public class SpawnFireBall : MonoBehaviour
     public GameObject cam;                                                  //Um rotation zu verwenden
     public int manaPointsCost = 5;                                          //Manakosten
 
+    //sound
+    public AudioClip shotSound;
+    private AudioSource AudioManager;
+    public float volumeValue = 0.1f;                                        //Um die Lautstärke zu regeln
+
     void Start()
     {
         effectToSpawn = fireBallsList[0];
+
+        //Audio
+        AudioManager = GetComponent<AudioSource>();
+        AudioManager.volume = volumeValue;              //Lautstärke regeln
     }
 
     void Update()
@@ -38,6 +47,7 @@ public class SpawnFireBall : MonoBehaviour
             //Instanziieren
             fireballs = Instantiate(effectToSpawn, firePoint.transform.position, Quaternion.identity);
             fireballs.GetComponent<FireBallMove>().firepoint = firePoint;
+            AudioManager.PlayOneShot(shotSound);
         }
         else
         {

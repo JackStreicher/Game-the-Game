@@ -60746,6 +60746,8 @@ MonoBehaviour:
   mana: {fileID: 1505978292}
   cam: {fileID: 1224130014}
   manaPointsCost: 20
+  shotSound: {fileID: 8300000, guid: d9fd138eeef1adc49ba235df774b4dfd, type: 3}
+  volumeValue: 0.1
 --- !u!4 &1505978290
 Transform:
   m_ObjectHideFlags: 0

@@ -17,6 +17,7 @@ public class FireBallMove : MonoBehaviour
     {
         Debug.Log(transform.rotation);
         transform.rotation = Quaternion.LookRotation(firepoint.transform.forward);
+
     }
     void Update()
     {
@@ -37,7 +38,7 @@ public class FireBallMove : MonoBehaviour
     {
 
 
-        speedOfTheFB = 0;               //wenn die Collision passiert ist, dann fliegt der Feuerball nicht mehr bzw steht und ...
+        speedOfTheFB = 0;               //wenn die Collision passiert ist, dann fliegt der Feuerball nicht mehr bzw steht und ...        
         Destroy(gameObject);            //... wird dann schließlich zerstört
 
 
@@ -54,7 +55,5 @@ public class FireBallMove : MonoBehaviour
             Debug.Log("collision mit enemy");
             collision.gameObject.GetComponent<NPCStats>().SufferDamage(fireBallDamage, playerStats);                      
         }
-
-
     }
 }
