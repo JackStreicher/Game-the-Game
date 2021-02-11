@@ -68,6 +68,8 @@
     <Compile Include="Assets\Scripts\Animation Scripts\AnimationController.cs" />
     <Compile Include="Assets\Scripts\Arrow.cs" />
     <Compile Include="Assets\Scripts\DialogManager.cs" />
+    <Compile Include="Assets\Scripts\Enemy path\AtackRay.cs" />
+    <Compile Include="Assets\Scripts\Enemy path\EnemyScript.cs" />
     <Compile Include="Assets\Scripts\EquipmentManager.cs" />
     <Compile Include="Assets\Scripts\EquipmentSlot.cs" />
     <Compile Include="Assets\Scripts\EquipmentUISlot.cs" />
