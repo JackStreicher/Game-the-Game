@@ -60,6 +60,10 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Editor\InteractableItemGenerator.cs" />
      <Compile Include="Assets\Scripts\Editor\QuestGenerator.cs" />
+     <Compile Include="Assets\VLights\Editor\VolumeLightAbout.cs" />
+     <Compile Include="Assets\VLights\Editor\VolumeLightCreator.cs" />
+     <Compile Include="Assets\VLights\Editor\VolumeLightManagerEditor.cs" />
+     <Compile Include="Assets\VLights\Editor\VolumeLightSlicedBasedEditor.cs" />
  <Reference Include="UnityEditor.TestRunner">
  <HintPath>/home/dominik/Documents/GitHub/Game-the-Game/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
  </Reference>
