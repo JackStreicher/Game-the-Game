@@ -10166,7 +10166,7 @@ GameObject:
   m_Component:
   - component: {fileID: 384964883}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: RespawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10179,8 +10179,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 384964882}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 318.93, y: 278.87, z: 1.58}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 318.93, y: 276.19986, z: 3.2649536}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -60081,6 +60081,19 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8006615347945198688}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1449222340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449222338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bceacffa2130c914092060789d12d5a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnPoint: {fileID: 384964882}
 --- !u!114 &1449222342 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1979012648, guid: 2e28d664ea6d8204ca7fa46af2727cfe,

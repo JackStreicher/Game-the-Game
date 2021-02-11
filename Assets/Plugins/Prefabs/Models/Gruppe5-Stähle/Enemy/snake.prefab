@@ -401,11 +401,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   walkpoint: {x: 0, y: 0, z: 0}
-  walkpointRange: 30
+  walkpointRange: 1000
   timeBetweenAttacks: 100
   damgeOfEnemy: 10
   damageTimer: 1000
-  sightRange: 1000
+  sightRange: 55
   attackRange: 10
 --- !u!195 &4145823409340350312
 NavMeshAgent:

@@ -2,13 +2,14 @@
 
 public class PlayerRespawn : MonoBehaviour
 {
+
     private float healthNow;            //aktuelles Leben des Spielers
     public GameObject respawnPoint;     //respawn punkt auf der Map 
 
     private void Start()
     {
         //Abfrage, damit man nicht vergisst den respawnpunkt einzutragen
-        if(respawnPoint = null) 
+        if(respawnPoint == null) 
         {
             Debug.Log("You need to select a Respawnpoint!");
         }
@@ -17,6 +18,8 @@ public class PlayerRespawn : MonoBehaviour
     private void Update()
     {
         UpdateHealth(); //Spielerleben wird aktualisiert
+
+
 
         //Wenn das Leben des Spielers unter bzw = 0 ist dann wird er ...
         if(healthNow <= 0)
@@ -33,10 +36,13 @@ public class PlayerRespawn : MonoBehaviour
     private void Respawn()
     {
         //Der Spieler wird zum Respawnpoint geportet
-        gameObject.transform.position = respawnPoint.transform.position;
+        GameObject.Find("Player").transform.position = respawnPoint.transform.position;
 
         //Das Leben wird wieder zurückgesetzt
         healthNow = 50f;
+
+        //Leben wird aktuallisiert bei STATS
+        gameObject.GetComponent<Stats>().currentHitpoints = healthNow;
     }
 
 }
