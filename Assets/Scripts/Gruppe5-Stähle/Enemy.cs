@@ -40,10 +40,6 @@ public class Enemy : MonoBehaviour
         //Überprüft die sicht und combat Range
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
-
-        if (!playerInSightRange && !playerInAttackRange) Patroling();
-        if (playerInSightRange && !playerInAttackRange) ChasePlayer();
-       // if (playerInSightRange && playerInAttackRange) AttackPlayer();
     }
 
     private void FixedUpdate()
@@ -56,6 +52,8 @@ public class Enemy : MonoBehaviour
             timer = 0;
         }
         if (playerInSightRange && playerInAttackRange && timer == 1) AttackPlayer();
+        if (!playerInSightRange && !playerInAttackRange) Patroling();
+        if (playerInSightRange && !playerInAttackRange) ChasePlayer();
 
 
 
