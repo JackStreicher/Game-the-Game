@@ -27,6 +27,10 @@ public class AtackRay : MonoBehaviour
 
                 Debug.Log("attack");
             }
+            else
+            {
+                anim.SetBool("Attack", false);
+            }
         }
         Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward), Color.red);
 

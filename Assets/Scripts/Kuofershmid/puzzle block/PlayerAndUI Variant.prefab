@@ -12,11 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b7cd1379ab5e1b43b94609a14c119cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gOname: 
-  health: 0
+  playerWeponName: 
+  health: 100
   damage: 0
-  isPlayer: 0
-  isHit: 0
+  isPlayer: 1
 --- !u!1001 &3469258292889138155
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -112,7 +111,7 @@ PrefabInstance:
     - target: {fileID: 1524604074541578586, guid: 9c586dcd8058ba54a8fdbd93373376d9,
         type: 3}
       propertyPath: m_Value
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8526157158225905268, guid: 9c586dcd8058ba54a8fdbd93373376d9,
         type: 3}
