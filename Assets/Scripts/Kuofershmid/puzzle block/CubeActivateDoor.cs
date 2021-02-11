@@ -30,6 +30,7 @@ public class CubeActivateDoor : MonoBehaviour
         //Debug.Log(other.name.Contains(key) + " " + key);
         if (other.name.Contains("key"))
         {
+            Destroy(other.gameObject);
             //Debug.Log("Hit");
             isOpen = true;
         }
@@ -45,5 +46,6 @@ public class CubeActivateDoor : MonoBehaviour
 
         isOpen = false;
         door.SetActive(false);
+        this.gameObject.SetActive(false);
     }
 }

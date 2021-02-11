@@ -1,56 +1,119 @@
-﻿using System;
-using UnityEditor.SceneManagement;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
+using Random = System.Random;
 
 public class MonsterAI : MonoBehaviour
 {
-    private GameObject player;
-    public NavMeshAgent agent;
-    private Collider vision;
-    private bool isInSight;
+    public Animator animator;
+    public float speed;
     
-    public void Start()
+    enum MonsterState
+    {
+        Idle, Approaching, Attacking
+    }
+    
+    private GameObject player;
+    private MonsterState mState = MonsterState.Idle;
+    private List<Vector3> wayPoints;
+
+    private bool isTargetReached = true;
+    
+    private void Start()
     {
         player = GameObject.FindWithTag("Player");
-        agent = GetComponent<NavMeshAgent>();
-        vision = GameObject.FindWithTag("VisionCone").gameObject.GetComponent<MeshCollider>();
+        wayPoints = new List<Vector3>();
     }
     
-    public void FixedUpdate()
+    private void FixedUpdate()
     {
-        if (IsPlayerVisible())
+        switch(mState)
         {
-            SelectTarget();
+            case MonsterState.Idle:
+                Idle();
+                break;
+            case MonsterState.Approaching:
+                ApproachPlayer();
+                break;
+            case MonsterState.Attacking:
+                StartAttacking();
+                break;
+        }
+
+
+
+    }
+    
+    private void Idle()
+    {
+        Random rand = new Random();
+        Quaternion rot = Quaternion.Euler(Mathf.Deg2Rad * rand.Next(0, 360), Mathf.Deg2Rad * rand.Next(0, 360), Mathf.Deg2Rad * rand.Next(0, 360));
+        transform.rotation = Quaternion.Slerp(transform.rotation, rot, speed * Time.deltaTime);
+    }
+
+    private void ApproachPlayer()
+    {
+        if (wayPoints.Count > 0)
+        {
+            Vector3 pos = wayPoints[0];
+            wayPoints.Remove(wayPoints[0]);
+            Move(pos);
+        }
+        
+        if (Vector3.Distance(transform.position, player.transform.position) <= 1)
+        {
+            wayPoints.Clear();
+            mState = MonsterState.Attacking;
         }
     }
     
-    public void SelectTarget()
+    private void StartAttacking()
     {
-        agent.SetDestination(player.transform.position);
-    }
-
-    public bool IsPlayerVisible()
-    {
-        if(isInSight)
+        if (Vector3.Distance(transform.position, player.transform.position) >= 5)
         {
-            //Debug.Log("I can See you\n-The enemy");
-            return true;
-        }
-        else
-        {
-            //Debug.Log("Cant see player");
-            return false;
+            mState = MonsterState.Approaching;
+            StartCoroutine(GetWayPoints());
         }
     }
 
-    public void OnTriggerEnter(Collider col)
+    public void SetPlayerVisible(bool isVisible)
     {
-        if (col.transform.CompareTag("Player")) isInSight = true;
+        if (isVisible) mState = MonsterState.Approaching;
+        StartCoroutine(GetWayPoints());
     }
-
-    public void OnTriggerExit(Collider col)
+    
+    public IEnumerator GetWayPoints()
     {
-        if (col.transform.CompareTag("Player")) isInSight = false;
+        while (mState == MonsterState.Approaching)
+        {
+            wayPoints.Add(player.transform.position);
+            yield return new WaitForSeconds(0.1f);
+        }
     }
+    
+    public void Move(Vector3 pos)
+    {
+        if (isTargetReached)
+        {
+            isTargetReached = false;
+            StartCoroutine(MoveToPosition(pos));
+        }
+    }
+    
+    public IEnumerator MoveToPosition(Vector3 pos)
+    {
+        bool reachedTarget = false;
+        while (!reachedTarget)
+        {
+            transform.position -= (new Vector3(transform.position.x, transform.position.y, transform.position.z) - pos).normalized;
+            yield return new WaitForFixedUpdate();
+            if (Vector3.Distance(transform.position, pos) <= 5)
+            {
+                reachedTarget = true;
+                isTargetReached = true;
+            }
+        }
+        
+    }
+    
 }
