@@ -1,125 +1,118 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
 using UnityEngine;
-using UnityEngine.AI;
-using Debug = UnityEngine.Debug;
 using Random = System.Random;
 
 public class MonsterAI : MonoBehaviour
 {
     public Animator animator;
-    public int SerachTime;
-    private Vector3 idlePosition;
     public float speed;
     
     enum MonsterState
     {
-        Idle, Approaching, Attacking, SearchingLostPlayer, ReturningToIdlePosition
+        Idle, Approaching, Attacking
     }
     
     private GameObject player;
-    private NavMeshAgent agent;
-    private bool isInSight;
     private MonsterState mState = MonsterState.Idle;
+    private List<Vector3> wayPoints;
 
+    private bool isTargetReached = true;
+    
     private void Start()
     {
         player = GameObject.FindWithTag("Player");
-        agent = GetComponent<NavMeshAgent>();
-        idlePosition = transform.position;
+        wayPoints = new List<Vector3>();
     }
     
     private void FixedUpdate()
     {
-        if (isInSight)
-        {
-            if (agent.hasPath)
-            {
-                if (Vector3.Distance(transform.position, player.transform.position) >= 1)
-                {
-                    mState = MonsterState.Attacking;
-                }
-            }
-            else
-            {
-                mState = MonsterState.Approaching;
-                SelectTarget();
-            }
-            
-        }
-
-        Debug.Log("-------------------");
-        Debug.Log("MonsterAI is " + mState);
-        Debug.Log("Target is: " + agent.destination);
-        Debug.Log("Player is at: " + player.transform.position);
-        Debug.Log("Idle position is at: " + idlePosition);
-        Debug.Log("-------------------\n");
-        
         switch(mState)
         {
             case MonsterState.Idle:
                 Idle();
                 break;
+            case MonsterState.Approaching:
+                ApproachPlayer();
+                break;
             case MonsterState.Attacking:
                 StartAttacking();
                 break;
-            case MonsterState.SearchingLostPlayer:
-                SearchLostPlayer();
-                break;
         }
+
+        Debug.Log(mState);
+
     }
     
-    private void StopWalking()
-    {
-        agent.destination = transform.position;
-    }
-
     private void Idle()
     {
         Random rand = new Random();
         Quaternion rot = Quaternion.Euler(Mathf.Deg2Rad * rand.Next(0, 360), Mathf.Deg2Rad * rand.Next(0, 360), Mathf.Deg2Rad * rand.Next(0, 360));
         transform.rotation = Quaternion.Slerp(transform.rotation, rot, speed * Time.deltaTime);
     }
-    
-    private void StartAttacking()
-    {
-        
-    }
 
-    private void ReturnToIdlePos()
+    private void ApproachPlayer()
     {
-        agent.destination = idlePosition;
-        if (agent.isStopped) mState = MonsterState.Idle;
-    }
-    
-    private void SearchLostPlayer()
-    {
-        Random rand = new Random();
-        agent.destination = transform.position + new Vector3(rand.Next(-15, 15), rand.Next(-15, 15), rand.Next(-15, 15));
-    }
-    
-    private void SelectTarget()
-    {
-        agent.destination = player.transform.position;
-    }
-    
-    public void SetPlayerVisible(bool isVisible)
-    {
-        isInSight = isVisible;
-        if (!isVisible)
+        if (wayPoints.Count > 0)
         {
-            mState = MonsterState.SearchingLostPlayer;
-            StartCoroutine(SearchPlayer());
+            Move(wayPoints[0]);
+            wayPoints.Remove(wayPoints[0]);
+        }
+        
+        if (Vector3.Distance(transform.position, player.transform.position) <= 1)
+        {
+            wayPoints.Clear();
+            mState = MonsterState.Attacking;
         }
     }
     
-    public IEnumerator SearchPlayer()
+    private void StartAttacking()
     {
-        yield return new WaitForSeconds(SerachTime);
-        ReturnToIdlePos();
-        mState = MonsterState.ReturningToIdlePosition;
+        if (Vector3.Distance(transform.position, player.transform.position) >= 5)
+        {
+            mState = MonsterState.Approaching;
+            StartCoroutine(GetWayPoints());
+        }
+    }
+
+    public void SetPlayerVisible(bool isVisible)
+    {
+        if (isVisible) mState = MonsterState.Approaching;
+        StartCoroutine(GetWayPoints());
+    }
+    
+    public IEnumerator GetWayPoints()
+    {
+        while (mState == MonsterState.Approaching)
+        {
+            wayPoints.Add(player.transform.position);
+            yield return new WaitForSeconds(0.1f);
+        }
+    }
+    
+    public void Move(Vector3 pos)
+    {
+        if (isTargetReached)
+        {
+            isTargetReached = false;
+            StartCoroutine(MoveToPosition(pos));
+        }
+    }
+    
+    public IEnumerator MoveToPosition(Vector3 pos)
+    {
+        bool reachedTarget = false;
+        while (!reachedTarget)
+        {
+            transform.position += pos.normalized * speed;
+            yield return new WaitForFixedUpdate();
+            if (Vector3.Distance(transform.position, pos) <= 5)
+            {
+                reachedTarget = true;
+                isTargetReached = true;
+            }
+        }
+        
     }
     
 }
