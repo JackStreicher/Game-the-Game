@@ -55,8 +55,9 @@ public class MonsterAI : MonoBehaviour
     {
         if (wayPoints.Count > 0)
         {
-            Move(wayPoints[0]);
+            Vector3 pos = wayPoints[0];
             wayPoints.Remove(wayPoints[0]);
+            Move(pos);
         }
         
         if (Vector3.Distance(transform.position, player.transform.position) <= 1)
@@ -104,7 +105,7 @@ public class MonsterAI : MonoBehaviour
         bool reachedTarget = false;
         while (!reachedTarget)
         {
-            transform.position += pos.normalized * speed;
+            transform.position += (new Vector3(transform.position.x, transform.position.y, transform.position.z) + pos).normalized;
             yield return new WaitForFixedUpdate();
             if (Vector3.Distance(transform.position, pos) <= 5)
             {
