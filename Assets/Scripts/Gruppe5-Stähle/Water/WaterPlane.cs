@@ -22,13 +22,13 @@ public class WaterPlane : MonoBehaviour
         var normals = new List<Vector3>();
         var uvs = new List<Vector2>();
 
-        for(int i = 0; i < gridSize + 1; i++)
+        for(int x = 0; x < gridSize + 1; x++)
         {
-            for(int j = 0; j < gridSize + 1; j++)
+            for(int y = 0; y < gridSize + 1; y++)
             {
-                vertices.Add(new Vector3(-size * 0.5f + size * (i / ((float)gridSize)), 0, -size * 0.5f + size * (j / ((float)gridSize))));
+                vertices.Add(new Vector3(-size * 0.5f + size * (x / ((float)gridSize)), 0, -size * 0.5f + size * (y / ((float)gridSize)))); // platziert vertices auf dem mesh welche durch die size und die gridSize die der spieler im editor bearbeiten kann beinflusst wird
                 normals.Add(Vector3.up);
-                uvs.Add(new Vector2(i / (float)gridSize, j / (float)gridSize));
+                uvs.Add(new Vector2(x / (float)gridSize, y / (float)gridSize));
             }
         }
 

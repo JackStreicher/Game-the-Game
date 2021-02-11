@@ -17,11 +17,11 @@ public class WaterMove : MonoBehaviour
         MoveWater();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         MoveWater();
-        offsetX += Time.deltaTime * timeScale;
-        offsetY += Time.deltaTime * timeScale;
+        offsetX += Time.deltaTime * timeScale; //Der Spieler kann kontrollieren wie schnell sich das Wasser bewegt
+        offsetY += Time.deltaTime * timeScale; //Der Spieler kann kontrollieren wie schnell sich das Wasser bewegt
     }
 
     void MoveWater()
@@ -30,10 +30,10 @@ public class WaterMove : MonoBehaviour
 
         for(int i = 0; i < vertices.Length; i++)
         {
-            vertices[i].y = CalculateHeight(vertices[i].x, vertices[i].z) * power;
+            vertices[i].y = CalculateHeight(vertices[i].x, vertices[i].z) * power; // verändert die position auf der y achse aller vertices
         }
 
-        mf.mesh.vertices = vertices;
+        mf.mesh.vertices = vertices; // "Updated" die vertices
     }
 
     float CalculateHeight(float x, float y)
@@ -41,6 +41,6 @@ public class WaterMove : MonoBehaviour
         float xCord = x * scale + offsetX;
         float yCord = y * scale + offsetY;
 
-        return Mathf.PerlinNoise(xCord, yCord);
+        return Mathf.PerlinNoise(xCord, yCord); //gibt einen random float wert zurück
     }
 }
