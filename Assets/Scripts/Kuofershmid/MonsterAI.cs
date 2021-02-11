@@ -40,7 +40,7 @@ public class MonsterAI : MonoBehaviour
                 break;
         }
 
-        Debug.Log(mState);
+
 
     }
     

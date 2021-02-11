@@ -38,6 +38,7 @@ public class EnemyScript : MonoBehaviour
         }
         else
         {
+            anim.SetBool("Walk", false);
             anim.SetBool("Idle", true);
         }
 
