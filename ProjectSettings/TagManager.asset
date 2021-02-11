@@ -9,8 +9,7 @@ TagManager:
   - Friendly
   - Enemy
   - Neutral
-  - CantMove
-  - VisionCone
+  - Weapon
   layers:
   - Default
   - TransparentFX
@@ -24,7 +23,7 @@ TagManager:
   - QuestItem
   - Enemy
   - Projectile
-  - 
+  - vlight
   - 
   - 
   - 

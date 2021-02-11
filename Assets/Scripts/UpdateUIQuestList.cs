@@ -17,6 +17,7 @@ public class UpdateUIQuestList : MonoBehaviour
 
     public void Start()
     {
+        uiQuestList = new List<Quest>();
         questlog = GameObject.Find("Questlog").GetComponent<Questlog>();
         uiQuestList = null;
     }
