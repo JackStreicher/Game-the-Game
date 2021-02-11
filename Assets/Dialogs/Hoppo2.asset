@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e43a41fc00947a846819cfbb4cac3913, type: 3}
+  m_Name: Hoppo2
+  m_EditorClassIdentifier: 
+  npcName: Hoppo der Bauer
+  dialogLines:
+  - "Danke dir f\xFCr deine Hilfe."
+  - Kannst du mir noch einen Gefallen tun?
+  - "Ich habe von einer Gl\xFCcksblume geh\xF6rt die auf dem Berg existieren soll."
+  awaitingQuestCompletion: Kannst du sie mir bringen?
+  quest: {fileID: 11400000, guid: bc28be241578c12479569a42cb1e45d9, type: 2}

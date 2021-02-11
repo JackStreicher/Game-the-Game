@@ -10,6 +10,8 @@ public static class Remover
 
     public static void CheckAndRemove(GameObject obj)
     {
+        Debug.Log("CheckAndRemove: "+obj.name);
+
         questlog.CheckAddProgress(obj);
         MonoBehaviour.Destroy(obj);
     }

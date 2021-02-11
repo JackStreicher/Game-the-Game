@@ -30,7 +30,7 @@ public class Goal : ScriptableObject
         if(goalType == GoalType.Find && !spawnedTarget)
         {
             Instantiate(findGoal, coordinate, Quaternion.identity);
-            spawnedTarget = false;
+            spawnedTarget = true;
         }
     }
     public virtual void QuestAddProgress(int amount)

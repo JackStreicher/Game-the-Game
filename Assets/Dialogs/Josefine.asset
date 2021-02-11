@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e43a41fc00947a846819cfbb4cac3913, type: 3}
+  m_Name: Josefine
+  m_EditorClassIdentifier: 
+  npcName: Josefine
+  dialogLines:
+  - Hallo.
+  - "Ich habe von einem Misteri\xF6sem Monster geh\xF6rt, welches hier irgendwo sein
+    soll."
+  - "Wenn du mir sagen k\xF6nntest wo es sich befindet w\xFCrde ich mich sehr dar\xFCber
+    freuen."
+  awaitingQuestCompletion: Hast du es gefunden?
+  quest: {fileID: 11400000, guid: dcab6f36b5ecb8049a52584a82a61f02, type: 2}

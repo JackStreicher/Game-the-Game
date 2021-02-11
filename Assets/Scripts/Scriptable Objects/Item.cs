@@ -77,6 +77,11 @@ public class Item : ScriptableObject
 
     public int GetMaximumStackSize()
     {
+        if (stacksize <= 0)
+        {
+            stacksize = 1;
+        }
+
         return stacksize;
     }
 

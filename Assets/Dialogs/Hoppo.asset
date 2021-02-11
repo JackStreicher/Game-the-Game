@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e43a41fc00947a846819cfbb4cac3913, type: 3}
+  m_Name: Hoppo
+  m_EditorClassIdentifier: 
+  npcName: Hoppo der Bauer
+  dialogLines:
+  - Hallo Fremder.
+  - Ich habe alle meine Mitarbeiter verloren...
+  - Meine Ernte wird schlecht.
+  awaitingQuestCompletion: Kannst du mir dabei helfen?
+  questDone: well done
+  quest: {fileID: 11400000, guid: 4d0bab71eeed84241854096b0899c309, type: 2}

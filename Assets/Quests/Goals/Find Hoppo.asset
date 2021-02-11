@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5743c5ef02a6a3340897a1f8541ee31b, type: 3}
+  m_Name: Find Hoppo
+  m_EditorClassIdentifier: 
+  goalType: 0
+  countRequired: 0
+  countCurrent: 0
+  completed: 0
+  goal: {fileID: 7223435729064856742, guid: 9ee104d23ed4d0f43bc5a37338dc4477, type: 3}
+  coordinate: {x: 0, y: 0, z: 0}

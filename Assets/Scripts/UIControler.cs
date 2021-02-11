@@ -18,8 +18,8 @@ public class UIControler : MonoBehaviour
 
     private void Start()
     {
-        panel.SetActive(true);
-        StartCoroutine(ExitUIAfterDelay(0.5f));
+        //panel.SetActive(true);
+        //StartCoroutine(ExitUIAfterDelay(0.5f));
     }
 
 

@@ -7,7 +7,7 @@ public class Questlog : MonoBehaviour
     [SerializeField]
     private List<Quest> questList = new List<Quest>();
 
-    private Stats playerStats;
+    public Stats playerStats;
 
     public InventoryManager playerInventory;
    
@@ -20,7 +20,7 @@ public class Questlog : MonoBehaviour
     public void Start()
     {
         //Required the GameObject called "Player" to have the Stats script attached
-        playerStats = GameObject.Find("Player").GetComponent<Stats>();
+        //playerStats = GameObject.Find("Player").GetComponent<Stats>();
         //uiQuestList = GameObject.Find("QuestlogContent").GetComponent<UpdateUIQuestList>();
 
         UpdateLocalQuestlist();
@@ -45,12 +45,11 @@ public class Questlog : MonoBehaviour
 
     private void UpdateLocalQuestlist()
     {
-
         List<Quest> newList = new List<Quest>();
 
         foreach (Quest quest in globalQuestList.globalQuestList)
         {
-            if (!quest.finished && quest.isQuestAccepted)
+            if (!quest.completed && quest.isQuestAccepted)
             {
                 newList.Add(quest);
             }
@@ -77,6 +76,7 @@ public class Questlog : MonoBehaviour
                 var currentGoal = questList[i].GetGoals()[j];
                
                 //Checks if the item/monster  we just picked up/ destroyed contains the string we need for our goal
+                //The Prefab must have the shortest possible name Example: Not Prefab Artefact Vafriant, but Artefact
                 if (possibleGoal.name.Contains(currentGoal.goal.name) && currentGoal.goalType != Goal.GoalType.Find)
                 {                    
 
@@ -100,11 +100,11 @@ public class Questlog : MonoBehaviour
         UpdateLocalQuestlist();
     }
 
-    public void GrantRewards(int gold, int xP, List<Item> items, Quest quest, bool resetQuest)
+    public bool GrantRewards(int gold, int xP, List<Item> items, Quest quest, bool resetQuest)
     {
         bool successful = false;
 
-        if (items.Count >= 0 && items != null)
+        if (items.Count >= 0 && items.Count > 0)
         {
 
             foreach (var newItem in items)
@@ -126,6 +126,7 @@ public class Questlog : MonoBehaviour
         else
         {
             successful = true;
+            quest.completed = true;
         }
 
         if (successful)
@@ -134,6 +135,8 @@ public class Questlog : MonoBehaviour
             playerStats.AddExperience(xP);
             RemoveQuestFromLog(quest, resetQuest);
         }
+
+        return successful;
     }
 
     public void RemoveQuestFromLog(Quest quest, bool resetQuest)
