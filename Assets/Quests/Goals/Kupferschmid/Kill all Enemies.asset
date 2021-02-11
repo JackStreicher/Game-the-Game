@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Kill all Enemies
   m_EditorClassIdentifier: 
   goalType: 1
-  countRequired: 20
+  countRequired: 17
   countCurrent: 0
   completed: 0
-  goal: {fileID: 0}
+  goal: {fileID: 5115763983897105311, guid: e35263fde9e02d349965d6526b3f2836, type: 3}
   coordinate: {x: 0, y: 0, z: 0}
   findGoal: {fileID: 0}
