@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/.cache/JetBrains/Rider2020.3/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/.cache/JetBrains/Rider2020.3/resharper-host/local/Transient/Rider/v203/SolutionCaches/_Game-the-Game.1822855951.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Materials" t="Include">
+          <e p="Terrain" t="Include">
+            <e p="MeshGradient.cs" t="Include" />
+            <e p="Terrain World Space Shader.shader" t="Include" />
+            <e p="TerrainSurfaceShader.shader" t="Include" />
+          </e>
+        </e>
+        <e p="Plugins" t="Include">
+          <e p="GitHub" t="Include">
+            <e p="Editor" t="Include">
+              <e p="ExtensionLoader.cs" t="Include" />
+              <e p="UnityAPIWrapper.cs" t="Include" />
+              <e p="credits.txt" t="Include" />
+              <e p="eula.txt" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="Animation Scripts" t="Include">
+            <e p="AnimationController.cs" t="Include" />
+          </e>
+          <e p="Arrow.cs" t="Include" />
+          <e p="DialogManager.cs" t="Include" />
+          <e p="Editor" t="Include">
+            <e p="InteractableItemGenerator.cs" t="Include" />
+            <e p="QuestGenerator.cs" t="Include" />
+          </e>
+          <e p="Enemy path" t="Include">
+            <e p="AtackRay.cs" t="Include" />
+            <e p="EnemyScript.cs" t="Include" />
+          </e>
+          <e p="EquipmentManager.cs" t="Include" />
+          <e p="EquipmentSlot.cs" t="Include" />
+          <e p="EquipmentUISlot.cs" t="Include" />
+          <e p="From External Sources" t="Include">
+            <e p="Terrain2OBJ.cs" t="Include" />
+          </e>
+          <e p="InventorySlot.cs" t="Include" />
+          <e p="InventoryState.cs" t="Include" />
+          <e p="InventoryUIConnection.cs" t="Include" />
+          <e p="ItemDrop.cs" t="Include" />
+          <e p="ItemStats.cs" t="Include" />
+          <e p="Kuofershmid" t="Include">
+            <e p="CheckPlayerDistance.cs" t="Include" />
+            <e p="MonsterAI.cs" t="Include" />
+            <e p="PortalBehaviour.cs" t="Include" />
+            <e p="VisionCone.cs" t="Include" />
+            <e p="puzzle block" t="Include">
+              <e p="BaseAi.cs" t="Include" />
+              <e p="CubeActivateDoor.cs" t="Include" />
+              <e p="DamageThePlayer.cs" t="Include" />
+              <e p="Helth.cs" t="Include" />
+              <e p="MoveBlock.cs" t="Include" />
+              <e p="StopBlock.cs" t="Include" />
+            </e>
+          </e>
+          <e p="MouseState.cs" t="Include" />
+          <e p="Movement" t="Include">
+            <e p="LookMouse.cs" t="Include" />
+            <e p="PlayerMovement.cs" t="Include" />
+          </e>
+          <e p="NPCConversation.cs" t="Include" />
+          <e p="NPCStats.cs" t="Include" />
+          <e p="PlayerInteraction.cs" t="Include" />
+          <e p="QuestLogUIText.cs" t="Include" />
+          <e p="QuestOnButton.cs" t="Include" />
+          <e p="Questlog.cs" t="Include" />
+          <e p="RangedHitPoint.cs" t="Include" />
+          <e p="Scriptable Objects" t="Include">
+            <e p="Armor.cs" t="Include" />
+            <e p="Consumable.cs" t="Include" />
+            <e p="Dialog.cs" t="Include" />
+            <e p="GlobalQuestList.cs" t="Include" />
+            <e p="Goal.cs" t="Include" />
+            <e p="InventoryManager.cs" t="Include" />
+            <e p="Item.cs" t="Include" />
+            <e p="PlayerReference.cs" t="Include" />
+            <e p="Quest.cs" t="Include" />
+            <e p="Stats.cs" t="Include" />
+            <e p="Weapon.cs" t="Include" />
+          </e>
+          <e p="SetTextField.cs" t="Include" />
+          <e p="Shoot.cs" t="Include" />
+          <e p="SimpleInventoryList.cs" t="Include" />
+          <e p="Statics" t="Include">
+            <e p="Remover.cs" t="Include" />
+          </e>
+          <e p="UIControler.cs" t="Include" />
+          <e p="UpdateUIQuestList.cs" t="Include" />
+        </e>
+        <e p="Sky" t="Include">
+          <e p="Fantasy Skybox FREE" t="Include">
+            <e p="Readme.txt" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="Game-the-Game.sln" t="IncludeFlat" />
+      <e p="Temp/bin" t="ExcludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

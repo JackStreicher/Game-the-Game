@@ -16,7 +16,9 @@ public static class Remover
 
     
     
-    private static IEnumerator DelayAndRemove(GameObject obj, float delay)
+   
+
+    public static IEnumerator DelayAndRemove(GameObject obj, float delay)
     {
         questlog.CheckAddProgress(obj);
         //Sets the body to not interact with physics so we can't for example collect an apple twice (Due to the delay)

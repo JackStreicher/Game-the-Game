@@ -1,0 +1,13 @@
+Library/*
+Packages/*
+Temp/*
+Assembly-CSharp*
+.vscode/*
+Packages/packages-lock.json
+Game-the-Game-FORK.sln
+Assets/Textures/Heightmaps.meta
+Assets/Textures/Diffuse.meta
+Assets/Textures/Bump.meta
+Assembly-CSharp.csproj
+Assembly-CSharp-Editor.csproj
+Assembly-CSharp-Editor-firstpass.csproj

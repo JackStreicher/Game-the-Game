@@ -99,7 +99,7 @@ public class Quest : ScriptableObject
         {
 
             finished = true;
-            Debug.Log("Quest " + title + " has been finished! Find the Questgivere to complete it");
+            Debug.Log("Quest " + title + " has been finished! Find the Questgiver to complete it");
             
             
 
@@ -141,7 +141,10 @@ public class Quest : ScriptableObject
         if (finished)
         {        
             
-            GameObject.Find("Questlog").GetComponent<Questlog>().GrantRewards(goldReward, experienceReward, itemReward, this, false);
+            if(GameObject.Find("Questlog").GetComponent<Questlog>().GrantRewards(goldReward, experienceReward, itemReward, this, false))
+            {
+                GameObject.Find("Questlog").GetComponent<Questlog>().RemoveQuestFromLog(this, true);
+            }
         }
     }
 }
