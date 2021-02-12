@@ -79,6 +79,7 @@
     <Compile Include="Assets\Scripts\MouseState.cs" />
     <Compile Include="Assets\Scripts\Movement\LookMouse.cs" />
     <Compile Include="Assets\Scripts\Movement\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\NPCBehaviour.cs" />
     <Compile Include="Assets\Scripts\NPCConversation.cs" />
     <Compile Include="Assets\Scripts\NPCStats.cs" />
     <Compile Include="Assets\Scripts\NPCWeapon.cs" />

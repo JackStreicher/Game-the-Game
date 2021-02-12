@@ -25,7 +25,7 @@ public class Arrow : MonoBehaviour
 
     Vector3 direction;
     // Start is called before the first frame update
-    public void Start()
+    public virtual void Start()
     {
         
         power = basePower;
@@ -38,20 +38,20 @@ public class Arrow : MonoBehaviour
     }
     
 
-    public void Fire(Vector3 dir)
+    public virtual void Fire(Vector3 dir)
     {
         damage = power;
         StartCoroutine(FireCo(dir));
      
     }
 
-    public IEnumerator FireCo(Vector3 tar)
+    public virtual IEnumerator FireCo(Vector3 tar)
     {
         parentTrans = null;
         transform.LookAt(tar);
         //Debug.Log(tar);
         rb.AddForce(transform.forward * power, ForceMode.Impulse);
-        Debug.Log("Power" + power);
+        //Debug.Log("Power" + power);
         //rb.AddTorque(transform.forward * 80, ForceMode.Impulse);
         //transform.Rotate(-15, 0, 0);
         rb.useGravity = true;
@@ -63,7 +63,7 @@ public class Arrow : MonoBehaviour
         flying = true;
     }
 
-    private void FixedUpdate()
+    protected virtual void FixedUpdate()
     {
         //The Arrow dips its head towards the Velocity vector
         if (rb.velocity != Vector3.zero)
@@ -135,10 +135,13 @@ public class Arrow : MonoBehaviour
         //rb.transform.GetComponent<SphereCollider>().enabled = false;
         if (collision.transform.GetComponent<NPCStats>())
         {
-            collision.transform.GetComponent<NPCStats>().SufferDamage(damage, GameObject.Find("Player").GetComponent<Stats>());
+            damage = power;
+            collision.transform.GetComponent<NPCStats>().SufferDamage(damage, GameObject.FindWithTag("Player").GetComponent<Stats>());
+
             rb.useGravity = false;
             rb.isKinematic = true;
             rb.velocity = Vector3.zero;
+            
             this.transform.position += transform.forward * power / 250; //depth of being stuck inside the NPC/wall
             this.transform.SetParent(collision.transform);
            

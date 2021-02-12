@@ -22,11 +22,12 @@ public class Goal : ScriptableObject
     public GameObject goal;
     public Vector3 coordinate;
 
-    private GameObject findGoal;
+    public GameObject findGoal;
     private bool spawnedTarget = false;
 
     public void OnValidate()
     {
+       
         if(goalType == GoalType.Find && !spawnedTarget)
         {
             Instantiate(findGoal, coordinate, Quaternion.identity);

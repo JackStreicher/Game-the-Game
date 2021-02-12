@@ -17,6 +17,7 @@ public class NPCStats : MonoBehaviour
     public string npcName;
     public float baseHitpoints;
     public float hitpoints;
+    public float armor;
     public int level;
     //Ordinary enemies: 1, elites: 2, unquies: 3, boss: 4, god: 6;
     public int difficulty = 1;
@@ -36,6 +37,8 @@ public class NPCStats : MonoBehaviour
         transform.gameObject.tag = npcTag.ToString();
 
         transform.gameObject.name = npcName;
+
+        
     }
 
 
@@ -46,11 +49,22 @@ public class NPCStats : MonoBehaviour
 
     public void SufferDamage(float damage, Stats player)
     {
+        
         if (!isDead)
         {
+            if (damage > armor)
+            {
+                hitpoints +=  armor - damage;
+                Debug.Log("Shot damage: " + (armor - damage));
+            }
+            else
+            {
+                hitpoints -= (baseHitpoints / 100); //1%
+                Debug.Log("Shot damage: " + (baseHitpoints / 100));
+            }
             
-            hitpoints -= damage;
-
+            
+            SendMessageUpwards("SetTargetAndEnterCombat", player.transform.gameObject);
             hitpoints = Mathf.Clamp(hitpoints, 0, Mathf.Infinity);
 
             if (hitpoints == 0)
@@ -64,9 +78,11 @@ public class NPCStats : MonoBehaviour
 
                 if (player != null && !isDead)
                 {
-                    Debug.Log("Grant XP " + GrantXP());
+                    //Debug.Log("Grant XP " + GrantXP());
                     player.AddExperience(GrantXP());
+
                     
+
                     Death();
                 }
                 //Has to die even if there is no Player script given
@@ -88,7 +104,7 @@ public class NPCStats : MonoBehaviour
         //StartCoroutine(Remover.DelayAndRemove(this.transform.gameobject, 200))
         isDead = true;
         //Remover.CheckAndRemove(this.transform.gameObject);
-        StartCoroutine(Remover.DelayAndRemove(this.transform.gameObject, 15000));
+        StartCoroutine(Remover.DelayAndRemove(this.transform.gameObject, 1500));
         var npcAnimator = transform.GetComponent<Animator>();
         if (npcAnimator != null)
         {

@@ -14,9 +14,11 @@ public class OrlagAnimationController : MonoBehaviour
 
   
 
-    public void Attack()
+
+
+    public virtual void Attack()
     {
-        var randomAnim = Random.Range(0,3);
+        var randomAnim = Random.Range(0,5);
 
         switch (randomAnim)
         {
@@ -26,21 +28,28 @@ public class OrlagAnimationController : MonoBehaviour
             case 2:
                 anim.SetTrigger("Attack2");
                 break;
+            case 3:
+                anim.SetTrigger("Attack3");
+                break;
+            case 4:
+                anim.SetTrigger("Attack4");
+                break;
+          
         }
     }
 
-    public void Walk()
+    public virtual void Walk()
     {
         anim.SetTrigger("Walk");
     }
 
-    public void Run()
+    public virtual void Run()
     {
         anim.SetTrigger("Run");
     }
-    public void Idle()
+    public virtual void Idle()
     {
-        var randomAnim = Random.Range(0, 3);
+        var randomAnim = Random.Range(0, 5);
 
         switch (randomAnim)
         {
@@ -50,11 +59,29 @@ public class OrlagAnimationController : MonoBehaviour
             case 2:
                 anim.SetTrigger("Idle2");
                 break;
+            case 3:
+                anim.SetTrigger("Idle3");
+                break;
+            case 4:
+                anim.SetTrigger("Idle4");
+                break;
         }
     }
 
-    public void Death()
+    public virtual void TakingDamage()
+    {
+        anim.SetTrigger("TakingDamage");
+    }
+
+    public virtual void CombatStance()
+    {
+        anim.SetTrigger("CombatStance");
+    }
+
+    public virtual void Death()
     {
         anim.SetBool("Dead",true);
     }
+
+
 }

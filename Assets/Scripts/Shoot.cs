@@ -63,7 +63,7 @@ public class Shoot : MonoBehaviour
             drawPower += drawPowerIncrement;
 
             drawPower = Mathf.Clamp(drawPower,20,projectile.GetComponent<Arrow>().basePower);
-            Debug.Log("Current Power " + projectile.GetComponent<Arrow>().basePower);
+            //Debug.Log("Current Power " + projectile.GetComponent<Arrow>().basePower);
         }
         else{
             drawPower = 5;
