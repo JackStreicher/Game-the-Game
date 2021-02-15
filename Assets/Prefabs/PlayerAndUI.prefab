@@ -165,7 +165,7 @@ PrefabInstance:
       objectReference: {fileID: 8832569402004882219}
     - target: {fileID: 781154130, guid: fa4435909b48f354da82409d055ff4c2, type: 3}
       propertyPath: offset.y
-      value: -8
+      value: -12
       objectReference: {fileID: 0}
     - target: {fileID: 838342623, guid: fa4435909b48f354da82409d055ff4c2, type: 3}
       propertyPath: inventory
@@ -224,7 +224,7 @@ PrefabInstance:
       objectReference: {fileID: 8832569399917246681}
     - target: {fileID: 1560334781, guid: fa4435909b48f354da82409d055ff4c2, type: 3}
       propertyPath: m_Value
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1568639164, guid: fa4435909b48f354da82409d055ff4c2, type: 3}
       propertyPath: inventory
@@ -873,6 +873,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 252019534, guid: 2e28d664ea6d8204ca7fa46af2727cfe, type: 3}
+      propertyPath: m_SkinWidth
+      value: 0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 252019534, guid: 2e28d664ea6d8204ca7fa46af2727cfe, type: 3}
+      propertyPath: m_StepOffset
+      value: 0.02
+      objectReference: {fileID: 0}
     - target: {fileID: 871046001, guid: 2e28d664ea6d8204ca7fa46af2727cfe, type: 3}
       propertyPath: playerStats
       value: 
@@ -925,15 +933,62 @@ PrefabInstance:
       propertyPath: camFirstPerson
       value: 
       objectReference: {fileID: 1524604074006322334}
+    - target: {fileID: 1979012648, guid: 2e28d664ea6d8204ca7fa46af2727cfe, type: 3}
+      propertyPath: armorBonus
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1979012648, guid: 2e28d664ea6d8204ca7fa46af2727cfe, type: 3}
+      propertyPath: baseHitpoints
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1979012648, guid: 2e28d664ea6d8204ca7fa46af2727cfe, type: 3}
+      propertyPath: currentHitpoints
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 22004806348519155, guid: 2e28d664ea6d8204ca7fa46af2727cfe,
         type: 3}
       propertyPath: equipmentPanel
       value: 
       objectReference: {fileID: 1524604073141207336}
+    - target: {fileID: 1100838042702160955, guid: 2e28d664ea6d8204ca7fa46af2727cfe,
+        type: 3}
+      propertyPath: field of view
+      value: 100.20707
+      objectReference: {fileID: 0}
+    - target: {fileID: 1100838042702160955, guid: 2e28d664ea6d8204ca7fa46af2727cfe,
+        type: 3}
+      propertyPath: m_FocalLength
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 1100838042702160955, guid: 2e28d664ea6d8204ca7fa46af2727cfe,
+        type: 3}
+      propertyPath: m_SensorSize.x
+      value: 70.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 1100838042702160955, guid: 2e28d664ea6d8204ca7fa46af2727cfe,
+        type: 3}
+      propertyPath: m_SensorSize.y
+      value: 52.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 1100838042702160955, guid: 2e28d664ea6d8204ca7fa46af2727cfe,
+        type: 3}
+      propertyPath: m_projectionMatrixMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1100838042702160957, guid: 2e28d664ea6d8204ca7fa46af2727cfe,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.395
+      objectReference: {fileID: 0}
+    - target: {fileID: 1100838042702160957, guid: 2e28d664ea6d8204ca7fa46af2727cfe,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.756
+      objectReference: {fileID: 0}
     - target: {fileID: 1100838042702160957, guid: 2e28d664ea6d8204ca7fa46af2727cfe,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.77
+      value: -1.809
       objectReference: {fileID: 0}
     - target: {fileID: 1100838043424612864, guid: 2e28d664ea6d8204ca7fa46af2727cfe,
         type: 3}
@@ -1039,6 +1094,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5555003226846056159, guid: 2e28d664ea6d8204ca7fa46af2727cfe,
+        type: 3}
+      propertyPath: zoomFactor
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8783003559799026053, guid: 2e28d664ea6d8204ca7fa46af2727cfe,
         type: 3}

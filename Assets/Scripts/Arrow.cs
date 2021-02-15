@@ -8,17 +8,17 @@ public class Arrow : MonoBehaviour
 {
     Rigidbody rb;
 
-    //Longow Power: 400-480 Newton
+    //Longow Power: 400-480 Newtonwww
     public float basePower = 80f;
-    private float power;
+    protected float power;
 
-    private float damage;
+    protected float damage;
 
     public Transform parentTrans;
 
     Vector3 v1; //previous pos
     Vector3 v2; //current Pos
-    private RaycastHit hit;
+    protected RaycastHit hit;
 
     bool flying;
 
@@ -50,7 +50,7 @@ public class Arrow : MonoBehaviour
         parentTrans = null;
         transform.LookAt(tar);
         //Debug.Log(tar);
-        rb.AddForce(transform.forward * power, ForceMode.Impulse);
+        rb.AddForce(transform.forward * power * 1.2f, ForceMode.Impulse);
         //Debug.Log("Power" + power);
         //rb.AddTorque(transform.forward * 80, ForceMode.Impulse);
         //transform.Rotate(-15, 0, 0);
@@ -128,7 +128,7 @@ public class Arrow : MonoBehaviour
     //    }
     //}
 
-    private void OnCollisionEnter(Collision collision)
+    protected void OnCollisionEnter(Collision collision)
     {
     
         //rb.useGravity = true;

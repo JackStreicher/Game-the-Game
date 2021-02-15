@@ -38,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
         //Load these via PlayerConfig Scriptable Object
         speed = 6f;
         speedModifier = 1.5f;
-
+        
         //jumpPower = 2f;
         prevPosY = transform.position.y;
     }
@@ -58,18 +58,18 @@ public class PlayerMovement : MonoBehaviour
 
 
 
-        isGroundedPlayer = controller.isGrounded;
-
-        if (isGroundedPlayer && velocity.y < 0)
-        {
-            velocity.y = 0f;
-        }
 
         if (Input.GetKeyDown(KeyCode.Space) && controller.isGrounded)
         {
             Jump();
 
         }
+        else
+        {
+            velocity.y += 3f * -9.81f * Time.deltaTime;
+        }
+        
+       
 
 
 
@@ -159,8 +159,11 @@ public class PlayerMovement : MonoBehaviour
 
         //Debug.Log("Moving " + move);
 
-        velocity.y +=  3f * -9.81f * Time.deltaTime;
+        
+        //velocity.y = Mathf.Clamp(velocity.y, -9.81f, Mathf.Infinity);
         controller.Move((move + velocity ) * Time.deltaTime);
+        isGroundedPlayer = controller.isGrounded;
+        
     }
 
 
@@ -170,8 +173,10 @@ public class PlayerMovement : MonoBehaviour
 
 
         //playerMovement.velocity += transform.up * jumpPower;
-        velocity.y += Mathf.Sqrt(jumpPower * -3.0f * -9.81f);
-        
+        velocity.y = 0;
+        velocity.y += Mathf.Sqrt(jumpPower * 3f * 9.81f);
+        //playerRB.AddForce(Vector3.up * jumpPower ,ForceMode.Impulse) ;
+      
             
         
     }
@@ -230,4 +235,6 @@ public class PlayerMovement : MonoBehaviour
 
     }
     */
+
+   
 }

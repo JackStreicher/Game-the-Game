@@ -5,6 +5,8 @@ using UnityEngine;
 public class OrlagAnimationController : MonoBehaviour
 {
 
+    protected bool isDead = false;
+
     Animator anim;
     // Start is called before the first frame update
     void Start()
@@ -12,13 +14,13 @@ public class OrlagAnimationController : MonoBehaviour
         anim = transform.GetComponent<Animator>();
     }
 
-  
+
 
 
 
     public virtual void Attack()
     {
-        var randomAnim = Random.Range(0,5);
+        var randomAnim = Random.Range(0, 5);
 
         switch (randomAnim)
         {
@@ -34,7 +36,7 @@ public class OrlagAnimationController : MonoBehaviour
             case 4:
                 anim.SetTrigger("Attack4");
                 break;
-          
+
         }
     }
 
@@ -80,7 +82,25 @@ public class OrlagAnimationController : MonoBehaviour
 
     public virtual void Death()
     {
-        anim.SetBool("Dead",true);
+        if (!isDead) {
+            anim.SetBool("Dead", true);
+            isDead = true;
+            var animRand = Random.Range(0, 2);
+
+            Debug.Log(animRand);
+            switch (animRand)
+            {
+                case 0:
+                    anim.SetTrigger("Death1");
+                    break;
+
+                case 1:
+                    anim.SetTrigger("Death2");
+                    break;
+
+
+            }
+        }
     }
 
 

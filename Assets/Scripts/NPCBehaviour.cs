@@ -163,7 +163,7 @@ public class NPCBehaviour : MonoBehaviour
         {
             //DeathLogic
             animationConrollerScript.Death();
-            GetComponent<ItemDrop>().DropItems();
+            //GetComponent<ItemDrop>().DropItems();
         }
 
     }

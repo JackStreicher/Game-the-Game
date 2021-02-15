@@ -83,13 +83,13 @@ public class NPCStats : MonoBehaviour
 
                     
 
-                    Death();
+                    //Death();
                 }
                 //Has to die even if there is no Player script given
                 else if (!isDead)
                 {
                     
-                    Death();
+                    //Death();
                 }
             }
         }
