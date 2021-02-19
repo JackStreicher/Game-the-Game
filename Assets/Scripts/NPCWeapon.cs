@@ -6,7 +6,7 @@ public class NPCWeapon : MonoBehaviour
 {
 
     public GameObject weapon;
-    private WeaponStats wStats;
+    public WeaponStats wStats;
     public GameObject weaponSlot;
     // Start is called before the first frame update
     void Start()
@@ -14,9 +14,9 @@ public class NPCWeapon : MonoBehaviour
         if (weapon != null && weaponSlot != null)
         {
             wStats = weapon.GetComponent<WeaponStats>();
-
-            Instantiate(weapon, weaponSlot.transform);
-
+            wStats.wielder = transform.gameObject;
+            var weaponInstance = Instantiate(weapon, weaponSlot.transform);
+            
             wStats.isAttacking = false;
         }
     }
@@ -26,4 +26,6 @@ public class NPCWeapon : MonoBehaviour
     {
         wStats.isAttacking = state;
     }
+
+   
 }

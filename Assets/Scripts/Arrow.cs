@@ -8,24 +8,24 @@ public class Arrow : MonoBehaviour
 {
     Rigidbody rb;
 
-    //Longow Power: 400-480 Newton
+    //Longow Power: 400-480 Newtonwww
     public float basePower = 80f;
-    private float power;
+    protected float power;
 
-    private float damage;
+    protected float damage;
 
     public Transform parentTrans;
 
     Vector3 v1; //previous pos
     Vector3 v2; //current Pos
-    private RaycastHit hit;
+    protected RaycastHit hit;
 
     bool flying;
 
 
     Vector3 direction;
     // Start is called before the first frame update
-    public void Start()
+    public virtual void Start()
     {
         
         power = basePower;
@@ -38,20 +38,20 @@ public class Arrow : MonoBehaviour
     }
     
 
-    public void Fire(Vector3 dir)
+    public virtual void Fire(Vector3 dir)
     {
         damage = power;
         StartCoroutine(FireCo(dir));
      
     }
 
-    public IEnumerator FireCo(Vector3 tar)
+    public virtual IEnumerator FireCo(Vector3 tar)
     {
         parentTrans = null;
         transform.LookAt(tar);
         //Debug.Log(tar);
-        rb.AddForce(transform.forward * power, ForceMode.Impulse);
-        Debug.Log("Power" + power);
+        rb.AddForce(transform.forward * power * 1.2f, ForceMode.Impulse);
+        //Debug.Log("Power" + power);
         //rb.AddTorque(transform.forward * 80, ForceMode.Impulse);
         //transform.Rotate(-15, 0, 0);
         rb.useGravity = true;
@@ -63,7 +63,7 @@ public class Arrow : MonoBehaviour
         flying = true;
     }
 
-    private void FixedUpdate()
+    protected virtual void FixedUpdate()
     {
         //The Arrow dips its head towards the Velocity vector
         if (rb.velocity != Vector3.zero)
@@ -128,17 +128,20 @@ public class Arrow : MonoBehaviour
     //    }
     //}
 
-    private void OnCollisionEnter(Collision collision)
+    protected void OnCollisionEnter(Collision collision)
     {
     
         //rb.useGravity = true;
         //rb.transform.GetComponent<SphereCollider>().enabled = false;
         if (collision.transform.GetComponent<NPCStats>())
         {
-            collision.transform.GetComponent<NPCStats>().SufferDamage(damage, GameObject.Find("Player").GetComponent<Stats>());
+            damage = power;
+            collision.transform.GetComponent<NPCStats>().SufferDamage(damage, GameObject.FindWithTag("Player").GetComponent<Stats>());
+
             rb.useGravity = false;
             rb.isKinematic = true;
             rb.velocity = Vector3.zero;
+            
             this.transform.position += transform.forward * power / 250; //depth of being stuck inside the NPC/wall
             this.transform.SetParent(collision.transform);
            
