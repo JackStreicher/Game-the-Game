@@ -95,7 +95,9 @@ public class NPCBehaviour : MonoBehaviour
         if (GetComponent<NPCStats>().hitpoints <= 0)
         {
             state = State.Death;
-            GetComponent<SphereCollider>().enabled = false;
+            //GetComponent<CapsuleCollider>().enabled = false;
+            controller.detectCollisions = false;
+            
         }
         //State Handling
         if (state == State.NonCombat)

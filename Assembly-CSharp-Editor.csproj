@@ -69,6 +69,7 @@
     <Compile Include="Assets\VLights\Editor\VolumeLightCreator.cs" />
     <Compile Include="Assets\VLights\Editor\VolumeLightManagerEditor.cs" />
     <Compile Include="Assets\VLights\Editor\VolumeLightSlicedBasedEditor.cs" />
+    <Compile Include="Assets\VolumetricLights-master\VolumetricLights-master\Assets\Editor\ImageEffects\TonemappingEditor.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.18f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -678,11 +679,17 @@
     <Reference Include="Unity.CollabProxy.Editor">
       <HintPath>C:/Users/Admin/Documents/Game the Game RPG/Game-the-Game/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Postprocessing.Editor">
+      <HintPath>C:/Users/Admin/Documents/Game the Game RPG/Game-the-Game/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>C:/Users/Admin/Documents/Game the Game RPG/Game-the-Game/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
       <HintPath>C:/Users/Admin/Documents/Game the Game RPG/Game-the-Game/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Postprocessing.Runtime">
+      <HintPath>C:/Users/Admin/Documents/Game the Game RPG/Game-the-Game/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ShaderGraph.Editor">
       <HintPath>C:/Users/Admin/Documents/Game the Game RPG/Game-the-Game/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
@@ -695,12 +702,6 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>C:/Users/Admin/Documents/Game the Game RPG/Game-the-Game/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Postprocessing.Editor">
-      <HintPath>C:/Users/Admin/Documents/Game the Game RPG/Game-the-Game/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Postprocessing.Runtime">
-      <HintPath>C:/Users/Admin/Documents/Game the Game RPG/Game-the-Game/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
