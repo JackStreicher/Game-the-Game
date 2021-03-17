@@ -65,13 +65,13 @@
   <ItemGroup>
     <Compile Include="Assets\Materials\Terrain\MeshGradient.cs" />
     <Compile Include="Assets\Prefabs\Orlag\OrlagAnimationController.cs" />
+    <Compile Include="Assets\Scripts\3rd Party\Terrain2OBJ.cs" />
     <Compile Include="Assets\Scripts\Animation Scripts\AnimationController.cs" />
     <Compile Include="Assets\Scripts\Arrow.cs" />
     <Compile Include="Assets\Scripts\DialogManager.cs" />
     <Compile Include="Assets\Scripts\EquipmentManager.cs" />
     <Compile Include="Assets\Scripts\EquipmentSlot.cs" />
     <Compile Include="Assets\Scripts\EquipmentUISlot.cs" />
-    <Compile Include="Assets\Scripts\From External Sources\Terrain2OBJ.cs" />
     <Compile Include="Assets\Scripts\InventorySlot.cs" />
     <Compile Include="Assets\Scripts\InventoryState.cs" />
     <Compile Include="Assets\Scripts\InventoryUIConnection.cs" />
