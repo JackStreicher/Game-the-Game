@@ -136,14 +136,16 @@ public class Arrow : MonoBehaviour
         if (collision.transform.GetComponent<NPCStats>())
         {
             damage = power;
+            rb.transform.GetComponent<CapsuleCollider>().enabled = false;
             collision.transform.GetComponent<NPCStats>().SufferDamage(damage, GameObject.FindWithTag("Player").GetComponent<Stats>());
-
+            
             rb.useGravity = false;
             rb.isKinematic = true;
             rb.velocity = Vector3.zero;
+           
             
             this.transform.position += transform.forward * power / 250; //depth of being stuck inside the NPC/wall
-            this.transform.SetParent(collision.transform);
+            this.transform.SetParent(collision.collider.transform);
            
             
     
